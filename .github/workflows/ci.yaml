@@ -1,0 +1,51 @@
+name: ci
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  generate:
+    name: generate + validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: azure/setup-helm@v4
+
+      - name: Install dependencies
+        run: pip install --quiet pyyaml jsonschema
+
+      - name: Generate catalog
+        run: python3 scripts/generate.py --output-dir site
+
+      - name: Validate output
+        run: |
+          python3 - <<'EOF'
+          import json, pathlib, sys
+          from jsonschema import Draft7Validator
+
+          site = pathlib.Path("site")
+          schemas = list(site.rglob("*.json"))
+          for path in schemas:
+              doc = json.loads(path.read_text())
+              if path.name != "catalog.json":
+                  Draft7Validator.check_schema(doc)
+          catalog = json.loads((site / "catalog.json").read_text())["schemas"]
+          assert len(catalog) > 0, "empty catalog"
+          print(f"{len(schemas)} JSON files parse, {len(catalog)} catalog entries")
+          EOF
+
+      - name: Summarize
+        run: |
+          echo "### Catalog contents" >> "$GITHUB_STEP_SUMMARY"
+          python3 -c "
+          import json
+          entries = json.load(open('site/catalog.json'))['schemas']
+          sources = {}
+          for e in entries:
+              sources.setdefault((e['source'], e['sourceVersion']), 0)
+              sources[(e['source'], e['sourceVersion'])] += 1
+          for (name, ver), count in sorted(sources.items()):
+              print(f'- {name}@{ver}: {count} schemas')
+          " >> "$GITHUB_STEP_SUMMARY"
