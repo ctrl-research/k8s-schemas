@@ -1,0 +1,49 @@
+name: update-versions
+
+on:
+  schedule:
+    # daily upstream version check; opens/updates a bump PR when pins are stale
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install --quiet pyyaml
+
+      - name: Check and update pins
+        id: check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/check-versions.py --update | tee versions.md
+          {
+            echo "summary<<EOF"
+            cat versions.md
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          rm versions.md
+
+      - name: Open bump PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: auto/update-versions
+          commit-message: "chore(sources): bump upstream versions"
+          title: "chore(sources): bump upstream versions"
+          add-paths: sources.yaml
+          body: |
+            Automated upstream version check.
+
+            ${{ steps.check.outputs.summary }}
+
+            Merging redeploys the catalog to GitHub Pages. Note: CI does not
+            auto-trigger on GITHUB_TOKEN-created PRs — close/reopen the PR or
+            push to the branch to run it, or rely on the publish run post-merge.

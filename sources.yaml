@@ -1,0 +1,104 @@
+# CRD sources for the schema catalog.
+#
+# Each entry pins the version deployed on the homelab cluster. Renovate bumps
+# `version:` via the `# renovate:` comment on the line above it. To keep
+# publishing older versions alongside the latest (the "various versions" tier),
+# list them under `extraVersions:` — the latest `version:` is also published to
+# the catalog root, pinned versions live under /{name}/{version}/.
+#
+# Source kinds:
+#   helm — chart from an HTTP helm repo (repo + chart + version)
+#   oci  — chart from an OCI registry (chart url + version)
+#   url  — raw manifest URLs; "{version}" is substituted into each url
+#
+# Order matters for the catalog root: when two sources ship the same CRD
+# (e.g. envoy-gateway bundles the gateway-api CRDs), the first source wins.
+sources:
+  - name: gateway-api
+    kind: url
+    urls:
+      - https://github.com/kubernetes-sigs/gateway-api/releases/download/{version}/standard-install.yaml
+    # renovate: datasource=github-releases depName=kubernetes-sigs/gateway-api
+    version: v1.6.0
+
+  - name: flux
+    kind: url
+    urls:
+      - https://github.com/fluxcd/flux2/releases/download/{version}/install.yaml
+    # renovate: datasource=github-releases depName=fluxcd/flux2
+    version: v2.9.1
+
+  - name: flux-operator
+    kind: oci
+    chart: oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator
+    # renovate: datasource=docker depName=ghcr.io/controlplaneio-fluxcd/charts/flux-operator
+    version: v0.37.0
+
+  - name: envoy-gateway
+    kind: oci
+    chart: oci://docker.io/envoyproxy/gateway-helm
+    # renovate: datasource=docker depName=docker.io/envoyproxy/gateway-helm
+    version: v1.6.0
+
+  - name: external-secrets
+    kind: helm
+    repo: https://charts.external-secrets.io
+    chart: external-secrets
+    # renovate: datasource=helm depName=external-secrets registryUrl=https://charts.external-secrets.io
+    version: 0.19.2
+
+  - name: metallb
+    kind: helm
+    repo: https://metallb.github.io/metallb
+    chart: metallb
+    # renovate: datasource=helm depName=metallb registryUrl=https://metallb.github.io/metallb
+    version: 0.16.1
+
+  - name: victoria-metrics-operator
+    kind: helm
+    repo: https://victoriametrics.github.io/helm-charts
+    chart: victoria-metrics-operator
+    # renovate: datasource=helm depName=victoria-metrics-operator registryUrl=https://victoriametrics.github.io/helm-charts
+    version: 0.54.0
+
+  - name: kube-prometheus-stack
+    kind: helm
+    repo: https://prometheus-community.github.io/helm-charts
+    chart: kube-prometheus-stack
+    # renovate: datasource=helm depName=kube-prometheus-stack registryUrl=https://prometheus-community.github.io/helm-charts
+    version: 75.3.3
+
+  - name: cloudnative-pg
+    kind: helm
+    repo: https://cloudnative-pg.github.io/charts
+    chart: cloudnative-pg
+    # renovate: datasource=helm depName=cloudnative-pg registryUrl=https://cloudnative-pg.github.io/charts
+    version: 0.26.1
+
+  - name: grafana-operator
+    kind: oci
+    chart: oci://ghcr.io/grafana/helm-charts/grafana-operator
+    # renovate: datasource=docker depName=ghcr.io/grafana/helm-charts/grafana-operator
+    version: v5.18.0
+
+  - name: dragonfly-operator
+    kind: oci
+    chart: oci://ghcr.io/dragonflydb/dragonfly-operator/helm/dragonfly-operator
+    # renovate: datasource=docker depName=ghcr.io/dragonflydb/dragonfly-operator/helm/dragonfly-operator
+    version: v1.3.0
+
+  - name: volsync
+    kind: helm
+    repo: https://backube.github.io/helm-charts
+    chart: volsync
+    # renovate: datasource=helm depName=volsync registryUrl=https://backube.github.io/helm-charts
+    version: 0.12.1
+
+  - name: external-snapshotter
+    kind: url
+    urls:
+      - https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/{version}/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
+      - https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/{version}/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+      - https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/{version}/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+    # renovate: datasource=github-releases depName=kubernetes-csi/external-snapshotter
+    version: v8.6.0
