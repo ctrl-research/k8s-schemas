@@ -10,83 +10,45 @@
   "prConcurrentLimit": 5,
   "prHourlyLimit": 2,
   "enabledManagers": [
-    "docker-compose",
     "github-actions",
-    "gomod"
+    "custom.regex"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Bump CRD source pins in sources.yaml",
+      "fileMatch": ["^sources\\.yaml$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)(?: registryUrl=(?<registryUrl>\\S+))?\\n\\s*version: (?<currentValue>\\S+)"
+      ]
+    }
   ],
   "packageRules": [
     {
-      "matchDatasources": [
-        "docker"
-      ],
-      "commitMessageTopic": "docker {{depName}}",
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
+      "matchFileNames": ["sources.yaml"],
+      "commitMessageTopic": "CRD source {{depName}}",
       "semanticCommitType": "chore",
-      "semanticCommitScope": "docker",
-      "bumpVersion": "patch",
-      "addLabels": [
-        "docker"
-      ]
+      "semanticCommitScope": "sources",
+      "addLabels": ["sources"]
     },
     {
-      "matchDatasources": [
-        "github-actions"
-      ],
+      "matchDatasources": ["github-actions"],
       "commitMessageTopic": "github action {{depName}}",
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
       "semanticCommitType": "chore",
       "semanticCommitScope": "ci",
-      "addLabels": [
-        "ci"
-      ]
+      "addLabels": ["ci"]
     },
     {
-      "matchDatasources": [
-        "gomod"
-      ],
-      "commitMessageTopic": "go module {{depName}}",
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "deps",
-      "addLabels": [
-        "go"
-      ]
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major"]
     },
     {
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "addLabels": [
-        "major"
-      ]
+      "matchUpdateTypes": ["minor"],
+      "addLabels": ["minor"]
     },
     {
-      "matchUpdateTypes": [
-        "minor"
-      ],
-      "addLabels": [
-        "minor"
-      ]
-    },
-    {
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "addLabels": [
-        "patch"
-      ]
+      "matchUpdateTypes": ["patch"],
+      "addLabels": ["patch"]
     }
   ],
   "labels": [

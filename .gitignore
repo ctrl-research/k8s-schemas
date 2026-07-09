@@ -63,3 +63,6 @@ venv/
 *.tmp
 *.temp
 .cache/
+
+# Build output (regenerated on every deploy)
+site/

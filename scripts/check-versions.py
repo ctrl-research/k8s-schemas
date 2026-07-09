@@ -7,8 +7,11 @@ Resolves the newest stable version for every source natively per kind:
   oci  -> registry tags list (anonymous pull token)
 
 With --update, rewrites the renovate-managed `version:` line of each stale
-source in sources.yaml. Prints a markdown summary either way; exits 0 whether
-or not updates were found (the workflow decides what to do with the diff).
+source in sources.yaml and demotes the previous pin into `extraVersions`
+(capped at KEEP_HISTORY entries) so already-published pinned-tier URLs keep
+resolving after the bump. Prints a markdown summary either way; exits 0
+whether or not updates were found (the workflow decides what to do with the
+diff).
 """
 import argparse
 import json
@@ -23,6 +26,7 @@ import yaml
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 STABLE = re.compile(r"^v?\d+(\.\d+)*$")
+KEEP_HISTORY = 5
 
 
 def get_json(url, headers=None):
@@ -73,14 +77,17 @@ def latest_oci_version(source):
 RESOLVERS = {"url": latest_github_release, "helm": latest_helm_version, "oci": latest_oci_version}
 
 
-def rewrite_version(text, name, old, new):
-    """Replace the version pin inside one source's block only."""
+def rewrite_pins(text, name, old, new, existing_extra):
+    """Bump one source's version pin and demote the old pin into extraVersions."""
+    history = ([old] + [v for v in existing_extra if v != old])[:KEEP_HISTORY]
+    extra_block = "    extraVersions:\n" + "".join(f"      - {v}\n" for v in history)
     block = re.compile(
-        rf"(- name: {re.escape(name)}\n(?:(?!- name: ).*\n)*?    version: ){re.escape(old)}\n"
+        rf"(?P<head>- name: {re.escape(name)}\n(?:(?!  - name: ).*\n)*?    version: ){re.escape(old)}\n"
+        rf"(?:    extraVersions:\n(?:      - .*\n)*)?"
     )
-    updated, count = block.subn(rf"\g<1>{new}\n", text)
+    updated, count = block.subn(lambda m: f"{m.group('head')}{new}\n{extra_block}", text)
     if count != 1:
-        raise RuntimeError(f"could not rewrite version for {name} (matched {count} times)")
+        raise RuntimeError(f"could not rewrite pins for {name} (matched {count} times)")
     return updated
 
 
@@ -103,7 +110,7 @@ def main():
             rows.append((name, current, "?", "check failed"))
             continue
         if latest and latest.lstrip("v") != current.lstrip("v"):
-            stale.append((name, current, latest))
+            stale.append((name, current, latest, source.get("extraVersions", [])))
             rows.append((name, current, latest, "stale"))
         else:
             rows.append((name, current, latest or current, "current"))
@@ -114,12 +121,12 @@ def main():
         print("| " + " | ".join(row) + " |")
 
     if args.update and stale:
-        for name, current, latest in stale:
+        for name, current, latest, extra in stale:
             # keep the pin's existing v-prefix style
             new = latest if current.startswith("v") == latest.startswith("v") else (
                 latest.lstrip("v") if not current.startswith("v") else f"v{latest.lstrip('v')}"
             )
-            text = rewrite_version(text, name, current, new)
+            text = rewrite_pins(text, name, current, new, extra)
         path.write_text(text)
         print(f"\nupdated {len(stale)} pin(s) in {path.name}", file=sys.stderr)
 

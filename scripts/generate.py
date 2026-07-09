@@ -28,12 +28,27 @@ import yaml
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 
+class CRDLoader(yaml.SafeLoader):
+    """SafeLoader that tolerates a literal `=` key (YAML 1.1 'value' tag).
+
+    kube-prometheus-stack's CRDs contain a property named `=`, which pyyaml
+    otherwise refuses to construct.
+    """
+
+
+CRDLoader.add_constructor("tag:yaml.org,2002:value", lambda loader, node: node.value)
+
+
+def load_docs(stream):
+    return list(yaml.load_all(stream, Loader=CRDLoader))
+
+
 def fetch_url_docs(source, version):
     docs = []
     for template in source["urls"]:
         url = template.format(version=version)
         with urllib.request.urlopen(url, timeout=60) as resp:
-            docs.extend(yaml.safe_load_all(resp.read()))
+            docs.extend(load_docs(resp.read()))
     return docs
 
 
@@ -49,7 +64,7 @@ def fetch_chart_docs(source, version):
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0:
         raise RuntimeError(f"helm template failed: {result.stderr.strip()[:500]}")
-    return list(yaml.safe_load_all(result.stdout))
+    return load_docs(result.stdout)
 
 
 def to_json_schema(node):

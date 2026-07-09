@@ -1,10 +1,11 @@
 # CRD sources for the schema catalog.
 #
-# Each entry pins the version deployed on the homelab cluster. Renovate bumps
-# `version:` via the `# renovate:` comment on the line above it. To keep
-# publishing older versions alongside the latest (the "various versions" tier),
-# list them under `extraVersions:` — the latest `version:` is also published to
-# the catalog root, pinned versions live under /{name}/{version}/.
+# Each entry pins the version deployed on the homelab cluster. The scheduled
+# update-versions workflow (and Renovate, via the `# renovate:` comment above
+# each version line) bumps `version:` and demotes the previous pin into
+# `extraVersions`, so published pinned-tier URLs keep resolving. The latest
+# `version:` also publishes to the catalog root; every version (including
+# extraVersions) publishes under /{name}/{version}/.
 #
 # Source kinds:
 #   helm — chart from an HTTP helm repo (repo + chart + version)
@@ -32,7 +33,7 @@ sources:
     kind: oci
     chart: oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator
     # renovate: datasource=docker depName=ghcr.io/controlplaneio-fluxcd/charts/flux-operator
-    version: v0.37.0
+    version: 0.37.0
 
   - name: envoy-gateway
     kind: oci
