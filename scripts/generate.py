@@ -15,7 +15,6 @@ When two sources ship the same CRD, the source listed first in sources.yaml
 owns the latest tier; later duplicates only publish to their pinned tier.
 """
 import argparse
-import html
 import json
 import pathlib
 import shutil
@@ -104,54 +103,6 @@ def write_schema(path, schema):
     path.write_text(json.dumps(schema, indent=2, sort_keys=False) + "\n")
 
 
-def build_index_html(catalog, site):
-    by_source = {}
-    for entry in catalog:
-        by_source.setdefault(entry["source"], {}).setdefault(
-            entry["sourceVersion"], []
-        ).append(entry)
-    sections = []
-    for source, versions in by_source.items():
-        blocks = []
-        for version, entries in versions.items():
-            links = "\n".join(
-                f'<li><a href="{e["pinnedPath"]}">{e["group"]}/{e["kind"]}_{e["version"]}.json</a></li>'
-                for e in sorted(entries, key=lambda e: (e["group"], e["kind"], e["version"]))
-            )
-            blocks.append(f"<details><summary>{html.escape(version)} ({len(entries)} schemas)</summary><ul>{links}</ul></details>")
-        sections.append(f"<section><h2>{html.escape(source)}</h2>{''.join(blocks)}</section>")
-    page = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>k8s-schemas</title>
-<style>
-  body {{ font-family: ui-monospace, SFMono-Regular, Menlo, monospace; max-width: 60rem;
-         margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }}
-  h1 {{ font-size: 1.4rem; }} h2 {{ font-size: 1.1rem; margin-bottom: .25rem; }}
-  code, pre {{ background: rgba(127,127,127,.12); border-radius: 4px; padding: .1rem .3rem; }}
-  pre {{ padding: .75rem; overflow-x: auto; }}
-  ul {{ margin: .25rem 0; }} li {{ list-style: none; }}
-  @media (prefers-color-scheme: dark) {{ body {{ background: #111; color: #ddd; }} a {{ color: #8cf; }} }}
-</style>
-</head>
-<body>
-<h1>k8s-schemas</h1>
-<p>JSON Schemas for Kubernetes CRDs, generated from upstream charts and manifests.</p>
-<p>Latest tier (tracks pinned source versions):</p>
-<pre>{{group}}/{{kind}}_{{version}}.json</pre>
-<p>Pinned tier (one per source version):</p>
-<pre>{{source}}/{{sourceVersion}}/{{group}}/{{kind}}_{{version}}.json</pre>
-<p>kubeconform: <code>-schema-location '&lt;base&gt;/{{{{.Group}}}}/{{{{.ResourceKind}}}}_{{{{.ResourceAPIVersion}}}}.json'</code>
-&middot; <a href="catalog.json">catalog.json</a></p>
-{''.join(sections)}
-</body>
-</html>
-"""
-    (site / "index.html").write_text(page)
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--sources", default=str(REPO_ROOT / "sources.yaml"))
@@ -204,17 +155,19 @@ def main():
                             write_schema(site / rel, schema)
                         else:
                             print(f"  note: {rel} owned by {owner}, {name} publishes pinned tier only")
+                    description = (schema.get("description") or "").strip()
                     catalog.append({
                         "source": name, "sourceVersion": source_version,
                         "group": group, "kind": kind, "version": version,
                         "latestPath": rel if latest_owner.get(rel) == name and is_latest else None,
                         "pinnedPath": pinned,
+                        "description": description[:200],
                     })
                     count += 1
             print(f"{name}@{source_version}: {count} schemas")
 
     (site / "catalog.json").write_text(json.dumps({"schemas": catalog}, indent=2) + "\n")
-    build_index_html(catalog, site)
+    shutil.copy(REPO_ROOT / "assets" / "index.html", site / "index.html")
     print(f"\nwrote {len(catalog)} schemas to {site}")
 
     if failures:
