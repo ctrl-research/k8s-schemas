@@ -1,6 +1,1036 @@
 {
   "schemas": [
     {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "admissionregistration.k8s.io",
+      "kind": "MutatingAdmissionPolicy",
+      "version": "v1",
+      "latestPath": "admissionregistration.k8s.io/mutatingadmissionpolicy_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/admissionregistration.k8s.io/mutatingadmissionpolicy_v1.json",
+      "description": "MutatingAdmissionPolicy describes the definition of an admission mutation policy that mutates the object coming into admission chain."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "admissionregistration.k8s.io",
+      "kind": "MutatingAdmissionPolicyBinding",
+      "version": "v1",
+      "latestPath": "admissionregistration.k8s.io/mutatingadmissionpolicybinding_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/admissionregistration.k8s.io/mutatingadmissionpolicybinding_v1.json",
+      "description": "MutatingAdmissionPolicyBinding binds the MutatingAdmissionPolicy with parametrized resources. MutatingAdmissionPolicyBinding and the optional parameter resource together define how cluster administrat"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "admissionregistration.k8s.io",
+      "kind": "MutatingWebhookConfiguration",
+      "version": "v1",
+      "latestPath": "admissionregistration.k8s.io/mutatingwebhookconfiguration_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/admissionregistration.k8s.io/mutatingwebhookconfiguration_v1.json",
+      "description": "MutatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and may change the object."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "admissionregistration.k8s.io",
+      "kind": "ValidatingAdmissionPolicy",
+      "version": "v1",
+      "latestPath": "admissionregistration.k8s.io/validatingadmissionpolicy_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/admissionregistration.k8s.io/validatingadmissionpolicy_v1.json",
+      "description": "ValidatingAdmissionPolicy describes the definition of an admission validation policy that accepts or rejects an object without changing it."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "admissionregistration.k8s.io",
+      "kind": "ValidatingAdmissionPolicyBinding",
+      "version": "v1",
+      "latestPath": "admissionregistration.k8s.io/validatingadmissionpolicybinding_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/admissionregistration.k8s.io/validatingadmissionpolicybinding_v1.json",
+      "description": "ValidatingAdmissionPolicyBinding binds the ValidatingAdmissionPolicy with paramerized resources. ValidatingAdmissionPolicyBinding and parameter CRDs together define how cluster administrators configur"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "admissionregistration.k8s.io",
+      "kind": "ValidatingWebhookConfiguration",
+      "version": "v1",
+      "latestPath": "admissionregistration.k8s.io/validatingwebhookconfiguration_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/admissionregistration.k8s.io/validatingwebhookconfiguration_v1.json",
+      "description": "ValidatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and object without changing it."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "admissionregistration.k8s.io",
+      "kind": "MutatingAdmissionPolicy",
+      "version": "v1alpha1",
+      "latestPath": "admissionregistration.k8s.io/mutatingadmissionpolicy_v1alpha1.json",
+      "pinnedPath": "kubernetes/v1.36.2/admissionregistration.k8s.io/mutatingadmissionpolicy_v1alpha1.json",
+      "description": "MutatingAdmissionPolicy describes the definition of an admission mutation policy that mutates the object coming into admission chain."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "admissionregistration.k8s.io",
+      "kind": "MutatingAdmissionPolicyBinding",
+      "version": "v1alpha1",
+      "latestPath": "admissionregistration.k8s.io/mutatingadmissionpolicybinding_v1alpha1.json",
+      "pinnedPath": "kubernetes/v1.36.2/admissionregistration.k8s.io/mutatingadmissionpolicybinding_v1alpha1.json",
+      "description": "MutatingAdmissionPolicyBinding binds the MutatingAdmissionPolicy with parametrized resources. MutatingAdmissionPolicyBinding and the optional parameter resource together define how cluster administrat"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "admissionregistration.k8s.io",
+      "kind": "MutatingAdmissionPolicy",
+      "version": "v1beta1",
+      "latestPath": "admissionregistration.k8s.io/mutatingadmissionpolicy_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/admissionregistration.k8s.io/mutatingadmissionpolicy_v1beta1.json",
+      "description": "MutatingAdmissionPolicy describes the definition of an admission mutation policy that mutates the object coming into admission chain."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "admissionregistration.k8s.io",
+      "kind": "MutatingAdmissionPolicyBinding",
+      "version": "v1beta1",
+      "latestPath": "admissionregistration.k8s.io/mutatingadmissionpolicybinding_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/admissionregistration.k8s.io/mutatingadmissionpolicybinding_v1beta1.json",
+      "description": "MutatingAdmissionPolicyBinding binds the MutatingAdmissionPolicy with parametrized resources. MutatingAdmissionPolicyBinding and the optional parameter resource together define how cluster administrat"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "internal.apiserver.k8s.io",
+      "kind": "StorageVersion",
+      "version": "v1alpha1",
+      "latestPath": "internal.apiserver.k8s.io/storageversion_v1alpha1.json",
+      "pinnedPath": "kubernetes/v1.36.2/internal.apiserver.k8s.io/storageversion_v1alpha1.json",
+      "description": "Storage version of a specific resource."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "apps",
+      "kind": "ControllerRevision",
+      "version": "v1",
+      "latestPath": "apps/controllerrevision_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/apps/controllerrevision_v1.json",
+      "description": "ControllerRevision implements an immutable snapshot of state data. Clients are responsible for serializing and deserializing the objects that contain their internal state. Once a ControllerRevision ha"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "apps",
+      "kind": "DaemonSet",
+      "version": "v1",
+      "latestPath": "apps/daemonset_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/apps/daemonset_v1.json",
+      "description": "DaemonSet represents the configuration of a daemon set."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "apps",
+      "kind": "Deployment",
+      "version": "v1",
+      "latestPath": "apps/deployment_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/apps/deployment_v1.json",
+      "description": "Deployment enables declarative updates for Pods and ReplicaSets."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "apps",
+      "kind": "ReplicaSet",
+      "version": "v1",
+      "latestPath": "apps/replicaset_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/apps/replicaset_v1.json",
+      "description": "ReplicaSet ensures that a specified number of pod replicas are running at any given time."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "apps",
+      "kind": "StatefulSet",
+      "version": "v1",
+      "latestPath": "apps/statefulset_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/apps/statefulset_v1.json",
+      "description": "StatefulSet represents a set of pods with consistent identities. Identities are defined as:\n  - Network: A single stable DNS and hostname.\n  - Storage: As many VolumeClaims as requested.\n\nThe Stateful"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "authentication.k8s.io",
+      "kind": "SelfSubjectReview",
+      "version": "v1",
+      "latestPath": "authentication.k8s.io/selfsubjectreview_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/authentication.k8s.io/selfsubjectreview_v1.json",
+      "description": "SelfSubjectReview contains the user information that the kube-apiserver has about the user making this request. When using impersonation, users will receive the user info of the user being impersonate"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "authentication.k8s.io",
+      "kind": "TokenRequest",
+      "version": "v1",
+      "latestPath": "authentication.k8s.io/tokenrequest_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/authentication.k8s.io/tokenrequest_v1.json",
+      "description": "TokenRequest requests a token for a given service account."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "authentication.k8s.io",
+      "kind": "TokenReview",
+      "version": "v1",
+      "latestPath": "authentication.k8s.io/tokenreview_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/authentication.k8s.io/tokenreview_v1.json",
+      "description": "TokenReview attempts to authenticate a token to a known user. Note: TokenReview requests may be cached by the webhook token authenticator plugin in the kube-apiserver."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "authorization.k8s.io",
+      "kind": "LocalSubjectAccessReview",
+      "version": "v1",
+      "latestPath": "authorization.k8s.io/localsubjectaccessreview_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/authorization.k8s.io/localsubjectaccessreview_v1.json",
+      "description": "LocalSubjectAccessReview checks whether or not a user or group can perform an action in a given namespace. Having a namespace scoped resource makes it much easier to grant namespace scoped policy that"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "authorization.k8s.io",
+      "kind": "SelfSubjectAccessReview",
+      "version": "v1",
+      "latestPath": "authorization.k8s.io/selfsubjectaccessreview_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/authorization.k8s.io/selfsubjectaccessreview_v1.json",
+      "description": "SelfSubjectAccessReview checks whether or the current user can perform an action.  Not filling in a spec.namespace means \"in all namespaces\".  Self is a special case, because users should always be ab"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "authorization.k8s.io",
+      "kind": "SelfSubjectRulesReview",
+      "version": "v1",
+      "latestPath": "authorization.k8s.io/selfsubjectrulesreview_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/authorization.k8s.io/selfsubjectrulesreview_v1.json",
+      "description": "SelfSubjectRulesReview enumerates the set of actions the current user can perform within a namespace. The returned list of actions may be incomplete depending on the server's authorization mode, and a"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "authorization.k8s.io",
+      "kind": "SubjectAccessReview",
+      "version": "v1",
+      "latestPath": "authorization.k8s.io/subjectaccessreview_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/authorization.k8s.io/subjectaccessreview_v1.json",
+      "description": "SubjectAccessReview checks whether or not a user or group can perform an action."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "autoscaling",
+      "kind": "HorizontalPodAutoscaler",
+      "version": "v1",
+      "latestPath": "autoscaling/horizontalpodautoscaler_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/autoscaling/horizontalpodautoscaler_v1.json",
+      "description": "configuration of a horizontal pod autoscaler."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "autoscaling",
+      "kind": "Scale",
+      "version": "v1",
+      "latestPath": "autoscaling/scale_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/autoscaling/scale_v1.json",
+      "description": "Scale represents a scaling request for a resource."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "autoscaling",
+      "kind": "HorizontalPodAutoscaler",
+      "version": "v2",
+      "latestPath": "autoscaling/horizontalpodautoscaler_v2.json",
+      "pinnedPath": "kubernetes/v1.36.2/autoscaling/horizontalpodautoscaler_v2.json",
+      "description": "HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which automatically manages the replica count of any resource implementing the scale subresource based on the metrics spec"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "batch",
+      "kind": "CronJob",
+      "version": "v1",
+      "latestPath": "batch/cronjob_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/batch/cronjob_v1.json",
+      "description": "CronJob represents the configuration of a single cron job."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "batch",
+      "kind": "Job",
+      "version": "v1",
+      "latestPath": "batch/job_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/batch/job_v1.json",
+      "description": "Job represents the configuration of a single job."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "certificates.k8s.io",
+      "kind": "CertificateSigningRequest",
+      "version": "v1",
+      "latestPath": "certificates.k8s.io/certificatesigningrequest_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/certificates.k8s.io/certificatesigningrequest_v1.json",
+      "description": "CertificateSigningRequest objects provide a mechanism to obtain x509 certificates by submitting a certificate signing request, and having it asynchronously approved and issued.\n\nKubelets use this API "
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "certificates.k8s.io",
+      "kind": "ClusterTrustBundle",
+      "version": "v1alpha1",
+      "latestPath": "certificates.k8s.io/clustertrustbundle_v1alpha1.json",
+      "pinnedPath": "kubernetes/v1.36.2/certificates.k8s.io/clustertrustbundle_v1alpha1.json",
+      "description": "ClusterTrustBundle is a cluster-scoped container for X.509 trust anchors (root certificates).\n\nClusterTrustBundle objects are considered to be readable by any authenticated user in the cluster, becaus"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "certificates.k8s.io",
+      "kind": "ClusterTrustBundle",
+      "version": "v1beta1",
+      "latestPath": "certificates.k8s.io/clustertrustbundle_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/certificates.k8s.io/clustertrustbundle_v1beta1.json",
+      "description": "ClusterTrustBundle is a cluster-scoped container for X.509 trust anchors (root certificates).\n\nClusterTrustBundle objects are considered to be readable by any authenticated user in the cluster, becaus"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "certificates.k8s.io",
+      "kind": "PodCertificateRequest",
+      "version": "v1beta1",
+      "latestPath": "certificates.k8s.io/podcertificaterequest_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/certificates.k8s.io/podcertificaterequest_v1beta1.json",
+      "description": "PodCertificateRequest encodes a pod requesting a certificate from a given signer.\n\nKubelets use this API to implement podCertificate projected volumes"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "coordination.k8s.io",
+      "kind": "Lease",
+      "version": "v1",
+      "latestPath": "coordination.k8s.io/lease_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/coordination.k8s.io/lease_v1.json",
+      "description": "Lease defines a lease concept."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "coordination.k8s.io",
+      "kind": "LeaseCandidate",
+      "version": "v1alpha2",
+      "latestPath": "coordination.k8s.io/leasecandidate_v1alpha2.json",
+      "pinnedPath": "kubernetes/v1.36.2/coordination.k8s.io/leasecandidate_v1alpha2.json",
+      "description": "LeaseCandidate defines a candidate for a Lease object. Candidates are created such that coordinated leader election will pick the best leader from the list of candidates."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "coordination.k8s.io",
+      "kind": "LeaseCandidate",
+      "version": "v1beta1",
+      "latestPath": "coordination.k8s.io/leasecandidate_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/coordination.k8s.io/leasecandidate_v1beta1.json",
+      "description": "LeaseCandidate defines a candidate for a Lease object. Candidates are created such that coordinated leader election will pick the best leader from the list of candidates."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "Binding",
+      "version": "v1",
+      "latestPath": "core/binding_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/binding_v1.json",
+      "description": "Binding ties one object to another; for example, a pod is bound to a node by a scheduler."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "ComponentStatus",
+      "version": "v1",
+      "latestPath": "core/componentstatus_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/componentstatus_v1.json",
+      "description": "ComponentStatus (and ComponentStatusList) holds the cluster validation info. Deprecated: This API is deprecated in v1.19+"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "ConfigMap",
+      "version": "v1",
+      "latestPath": "core/configmap_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/configmap_v1.json",
+      "description": "ConfigMap holds configuration data for pods to consume."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "Endpoints",
+      "version": "v1",
+      "latestPath": "core/endpoints_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/endpoints_v1.json",
+      "description": "Endpoints is a collection of endpoints that implement the actual service. Example:\n\n\t Name: \"mysvc\",\n\t Subsets: [\n\t   {\n\t     Addresses: [{\"ip\": \"10.10.1.1\"}, {\"ip\": \"10.10.2.2\"}],\n\t     Ports: [{\"nam"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "Event",
+      "version": "v1",
+      "latestPath": "core/event_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/event_v1.json",
+      "description": "Event is a report of an event somewhere in the cluster.  Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "LimitRange",
+      "version": "v1",
+      "latestPath": "core/limitrange_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/limitrange_v1.json",
+      "description": "LimitRange sets resource usage limits for each kind of resource in a Namespace."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "Namespace",
+      "version": "v1",
+      "latestPath": "core/namespace_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/namespace_v1.json",
+      "description": "Namespace provides a scope for Names. Use of multiple namespaces is optional."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "Node",
+      "version": "v1",
+      "latestPath": "core/node_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/node_v1.json",
+      "description": "Node is a worker node in Kubernetes. Each node will have a unique identifier in the cache (i.e. in etcd)."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "PersistentVolume",
+      "version": "v1",
+      "latestPath": "core/persistentvolume_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/persistentvolume_v1.json",
+      "description": "PersistentVolume (PV) is a storage resource provisioned by an administrator. It is analogous to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "PersistentVolumeClaim",
+      "version": "v1",
+      "latestPath": "core/persistentvolumeclaim_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/persistentvolumeclaim_v1.json",
+      "description": "PersistentVolumeClaim is a user's request for and claim to a persistent volume"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "Pod",
+      "version": "v1",
+      "latestPath": "core/pod_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/pod_v1.json",
+      "description": "Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "PodTemplate",
+      "version": "v1",
+      "latestPath": "core/podtemplate_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/podtemplate_v1.json",
+      "description": "PodTemplate describes a template for creating copies of a predefined pod."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "ReplicationController",
+      "version": "v1",
+      "latestPath": "core/replicationcontroller_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/replicationcontroller_v1.json",
+      "description": "ReplicationController represents the configuration of a replication controller."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "ResourceQuota",
+      "version": "v1",
+      "latestPath": "core/resourcequota_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/resourcequota_v1.json",
+      "description": "ResourceQuota sets aggregate quota restrictions enforced per namespace"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "Secret",
+      "version": "v1",
+      "latestPath": "core/secret_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/secret_v1.json",
+      "description": "Secret holds secret data of a certain type. The total bytes of the values in the Data field must be less than MaxSecretSize bytes."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "Service",
+      "version": "v1",
+      "latestPath": "core/service_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/service_v1.json",
+      "description": "Service is a named abstraction of software service (for example, mysql) consisting of local port (for example 3306) that the proxy listens on, and the selector that determines which pods will answer r"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "ServiceAccount",
+      "version": "v1",
+      "latestPath": "core/serviceaccount_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/serviceaccount_v1.json",
+      "description": "ServiceAccount binds together: * a name, understood by users, and perhaps by peripheral systems, for an identity * a principal that can be authenticated and authorized * a set of secrets"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "discovery.k8s.io",
+      "kind": "EndpointSlice",
+      "version": "v1",
+      "latestPath": "discovery.k8s.io/endpointslice_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/discovery.k8s.io/endpointslice_v1.json",
+      "description": "EndpointSlice represents a set of service endpoints. Most EndpointSlices are created by the EndpointSlice controller to represent the Pods selected by Service objects. For a given service there may be"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "events.k8s.io",
+      "kind": "Event",
+      "version": "v1",
+      "latestPath": "events.k8s.io/event_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/events.k8s.io/event_v1.json",
+      "description": "Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system. Events have a limited retention time and triggers and messages may evolve with time.  Even"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "flowcontrol.apiserver.k8s.io",
+      "kind": "FlowSchema",
+      "version": "v1",
+      "latestPath": "flowcontrol.apiserver.k8s.io/flowschema_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/flowcontrol.apiserver.k8s.io/flowschema_v1.json",
+      "description": "FlowSchema defines the schema of a group of flows. Note that a flow is made up of a set of inbound API requests with similar attributes and is identified by a pair of strings: the name of the FlowSche"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "flowcontrol.apiserver.k8s.io",
+      "kind": "PriorityLevelConfiguration",
+      "version": "v1",
+      "latestPath": "flowcontrol.apiserver.k8s.io/prioritylevelconfiguration_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/flowcontrol.apiserver.k8s.io/prioritylevelconfiguration_v1.json",
+      "description": "PriorityLevelConfiguration represents the configuration of a priority level."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "networking.k8s.io",
+      "kind": "IPAddress",
+      "version": "v1",
+      "latestPath": "networking.k8s.io/ipaddress_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/networking.k8s.io/ipaddress_v1.json",
+      "description": "IPAddress represents a single IP of a single IP Family. The object is designed to be used by APIs that operate on IP addresses. The object is used by the Service core API for allocation of IP addresse"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "networking.k8s.io",
+      "kind": "Ingress",
+      "version": "v1",
+      "latestPath": "networking.k8s.io/ingress_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/networking.k8s.io/ingress_v1.json",
+      "description": "Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable urls, load balance traff"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "networking.k8s.io",
+      "kind": "IngressClass",
+      "version": "v1",
+      "latestPath": "networking.k8s.io/ingressclass_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/networking.k8s.io/ingressclass_v1.json",
+      "description": "IngressClass represents the class of the Ingress, referenced by the Ingress Spec. The `ingressclass.kubernetes.io/is-default-class` annotation can be used to indicate that an IngressClass should be co"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "networking.k8s.io",
+      "kind": "NetworkPolicy",
+      "version": "v1",
+      "latestPath": "networking.k8s.io/networkpolicy_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/networking.k8s.io/networkpolicy_v1.json",
+      "description": "NetworkPolicy describes what network traffic is allowed for a set of Pods"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "networking.k8s.io",
+      "kind": "ServiceCIDR",
+      "version": "v1",
+      "latestPath": "networking.k8s.io/servicecidr_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/networking.k8s.io/servicecidr_v1.json",
+      "description": "ServiceCIDR defines a range of IP addresses using CIDR format (e.g. 192.168.0.0/24 or 2001:db2::/64). This range is used to allocate ClusterIPs to Service objects."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "networking.k8s.io",
+      "kind": "IPAddress",
+      "version": "v1beta1",
+      "latestPath": "networking.k8s.io/ipaddress_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/networking.k8s.io/ipaddress_v1beta1.json",
+      "description": "IPAddress represents a single IP of a single IP Family. The object is designed to be used by APIs that operate on IP addresses. The object is used by the Service core API for allocation of IP addresse"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "networking.k8s.io",
+      "kind": "ServiceCIDR",
+      "version": "v1beta1",
+      "latestPath": "networking.k8s.io/servicecidr_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/networking.k8s.io/servicecidr_v1beta1.json",
+      "description": "ServiceCIDR defines a range of IP addresses using CIDR format (e.g. 192.168.0.0/24 or 2001:db2::/64). This range is used to allocate ClusterIPs to Service objects."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "node.k8s.io",
+      "kind": "RuntimeClass",
+      "version": "v1",
+      "latestPath": "node.k8s.io/runtimeclass_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/node.k8s.io/runtimeclass_v1.json",
+      "description": "RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass is used to determine which container runtime is used to run all containers in a pod. RuntimeClasses are man"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "policy",
+      "kind": "Eviction",
+      "version": "v1",
+      "latestPath": "policy/eviction_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/policy/eviction_v1.json",
+      "description": "Eviction evicts a pod from its node subject to certain policies and safety constraints. This is a subresource of Pod.  A request to cause such an eviction is created by POSTing to .../pods/<pod name>/"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "policy",
+      "kind": "PodDisruptionBudget",
+      "version": "v1",
+      "latestPath": "policy/poddisruptionbudget_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/policy/poddisruptionbudget_v1.json",
+      "description": "PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "version": "v1",
+      "latestPath": "rbac.authorization.k8s.io/clusterrole_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/rbac.authorization.k8s.io/clusterrole_v1.json",
+      "description": "ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "rbac.authorization.k8s.io",
+      "kind": "ClusterRoleBinding",
+      "version": "v1",
+      "latestPath": "rbac.authorization.k8s.io/clusterrolebinding_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/rbac.authorization.k8s.io/clusterrolebinding_v1.json",
+      "description": "ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace, and adds who information via Subject."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "rbac.authorization.k8s.io",
+      "kind": "Role",
+      "version": "v1",
+      "latestPath": "rbac.authorization.k8s.io/role_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/rbac.authorization.k8s.io/role_v1.json",
+      "description": "Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "rbac.authorization.k8s.io",
+      "kind": "RoleBinding",
+      "version": "v1",
+      "latestPath": "rbac.authorization.k8s.io/rolebinding_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/rbac.authorization.k8s.io/rolebinding_v1.json",
+      "description": "RoleBinding references a role, but does not contain it.  It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace info"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "DeviceClass",
+      "version": "v1",
+      "latestPath": "resource.k8s.io/deviceclass_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/deviceclass_v1.json",
+      "description": "DeviceClass is a vendor- or admin-provided resource that contains device configuration and selectors. It can be referenced in the device requests of a claim to apply these presets. Cluster scoped."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "ResourceClaim",
+      "version": "v1",
+      "latestPath": "resource.k8s.io/resourceclaim_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/resourceclaim_v1.json",
+      "description": "ResourceClaim describes a request for access to resources in the cluster, for use by workloads. For example, if a workload needs an accelerator device with specific properties, this is how that reques"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "ResourceClaimTemplate",
+      "version": "v1",
+      "latestPath": "resource.k8s.io/resourceclaimtemplate_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/resourceclaimtemplate_v1.json",
+      "description": "ResourceClaimTemplate is used to produce ResourceClaim objects."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "ResourceSlice",
+      "version": "v1",
+      "latestPath": "resource.k8s.io/resourceslice_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/resourceslice_v1.json",
+      "description": "ResourceSlice represents one or more resources in a pool of similar resources, managed by a common driver. A pool may span more than one ResourceSlice, and exactly how many ResourceSlices comprise a p"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "DeviceTaintRule",
+      "version": "v1alpha3",
+      "latestPath": "resource.k8s.io/devicetaintrule_v1alpha3.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/devicetaintrule_v1alpha3.json",
+      "description": "DeviceTaintRule adds one taint to all devices which match the selector. This has the same effect as if the taint was specified directly in the ResourceSlice by the DRA driver."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "ResourcePoolStatusRequest",
+      "version": "v1alpha3",
+      "latestPath": "resource.k8s.io/resourcepoolstatusrequest_v1alpha3.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/resourcepoolstatusrequest_v1alpha3.json",
+      "description": "ResourcePoolStatusRequest triggers a one-time calculation of resource pool status based on the provided filters. Once status is set, the request is considered complete and will not be reprocessed. Use"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "DeviceClass",
+      "version": "v1beta1",
+      "latestPath": "resource.k8s.io/deviceclass_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/deviceclass_v1beta1.json",
+      "description": "DeviceClass is a vendor- or admin-provided resource that contains device configuration and selectors. It can be referenced in the device requests of a claim to apply these presets. Cluster scoped.\n\nTh"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "ResourceClaim",
+      "version": "v1beta1",
+      "latestPath": "resource.k8s.io/resourceclaim_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/resourceclaim_v1beta1.json",
+      "description": "ResourceClaim describes a request for access to resources in the cluster, for use by workloads. For example, if a workload needs an accelerator device with specific properties, this is how that reques"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "ResourceClaimTemplate",
+      "version": "v1beta1",
+      "latestPath": "resource.k8s.io/resourceclaimtemplate_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/resourceclaimtemplate_v1beta1.json",
+      "description": "ResourceClaimTemplate is used to produce ResourceClaim objects.\n\nThis is an alpha type and requires enabling the DynamicResourceAllocation feature gate."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "ResourceSlice",
+      "version": "v1beta1",
+      "latestPath": "resource.k8s.io/resourceslice_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/resourceslice_v1beta1.json",
+      "description": "ResourceSlice represents one or more resources in a pool of similar resources, managed by a common driver. A pool may span more than one ResourceSlice, and exactly how many ResourceSlices comprise a p"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "DeviceClass",
+      "version": "v1beta2",
+      "latestPath": "resource.k8s.io/deviceclass_v1beta2.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/deviceclass_v1beta2.json",
+      "description": "DeviceClass is a vendor- or admin-provided resource that contains device configuration and selectors. It can be referenced in the device requests of a claim to apply these presets. Cluster scoped.\n\nTh"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "DeviceTaintRule",
+      "version": "v1beta2",
+      "latestPath": "resource.k8s.io/devicetaintrule_v1beta2.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/devicetaintrule_v1beta2.json",
+      "description": "DeviceTaintRule adds one taint to all devices which match the selector. This has the same effect as if the taint was specified directly in the ResourceSlice by the DRA driver."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "ResourceClaim",
+      "version": "v1beta2",
+      "latestPath": "resource.k8s.io/resourceclaim_v1beta2.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/resourceclaim_v1beta2.json",
+      "description": "ResourceClaim describes a request for access to resources in the cluster, for use by workloads. For example, if a workload needs an accelerator device with specific properties, this is how that reques"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "ResourceClaimTemplate",
+      "version": "v1beta2",
+      "latestPath": "resource.k8s.io/resourceclaimtemplate_v1beta2.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/resourceclaimtemplate_v1beta2.json",
+      "description": "ResourceClaimTemplate is used to produce ResourceClaim objects.\n\nThis is an alpha type and requires enabling the DynamicResourceAllocation feature gate."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "resource.k8s.io",
+      "kind": "ResourceSlice",
+      "version": "v1beta2",
+      "latestPath": "resource.k8s.io/resourceslice_v1beta2.json",
+      "pinnedPath": "kubernetes/v1.36.2/resource.k8s.io/resourceslice_v1beta2.json",
+      "description": "ResourceSlice represents one or more resources in a pool of similar resources, managed by a common driver. A pool may span more than one ResourceSlice, and exactly how many ResourceSlices comprise a p"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "scheduling.k8s.io",
+      "kind": "PriorityClass",
+      "version": "v1",
+      "latestPath": "scheduling.k8s.io/priorityclass_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/scheduling.k8s.io/priorityclass_v1.json",
+      "description": "PriorityClass defines mapping from a priority class name to the priority integer value. The value can be any valid integer."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "scheduling.k8s.io",
+      "kind": "PodGroup",
+      "version": "v1alpha2",
+      "latestPath": "scheduling.k8s.io/podgroup_v1alpha2.json",
+      "pinnedPath": "kubernetes/v1.36.2/scheduling.k8s.io/podgroup_v1alpha2.json",
+      "description": "PodGroup represents a runtime instance of pods grouped together. PodGroups are created by workload controllers (Job, LWS, JobSet, etc...) from Workload.podGroupTemplates. PodGroup API enablement is to"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "scheduling.k8s.io",
+      "kind": "Workload",
+      "version": "v1alpha2",
+      "latestPath": "scheduling.k8s.io/workload_v1alpha2.json",
+      "pinnedPath": "kubernetes/v1.36.2/scheduling.k8s.io/workload_v1alpha2.json",
+      "description": "Workload allows for expressing scheduling constraints that should be used when managing the lifecycle of workloads from the scheduling perspective, including scheduling, preemption, eviction and other"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "storage.k8s.io",
+      "kind": "CSIDriver",
+      "version": "v1",
+      "latestPath": "storage.k8s.io/csidriver_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/storage.k8s.io/csidriver_v1.json",
+      "description": "CSIDriver captures information about a Container Storage Interface (CSI) volume driver deployed on the cluster. Kubernetes attach detach controller uses this object to determine whether attach is requ"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "storage.k8s.io",
+      "kind": "CSINode",
+      "version": "v1",
+      "latestPath": "storage.k8s.io/csinode_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/storage.k8s.io/csinode_v1.json",
+      "description": "CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need to create the CSINode object directly. As long as they use the node-driver-registrar sidecar container, the"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "storage.k8s.io",
+      "kind": "CSIStorageCapacity",
+      "version": "v1",
+      "latestPath": "storage.k8s.io/csistoragecapacity_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/storage.k8s.io/csistoragecapacity_v1.json",
+      "description": "CSIStorageCapacity stores the result of one CSI GetCapacity call. For a given StorageClass, this describes the available capacity in a particular topology segment.  This can be used when considering w"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "storage.k8s.io",
+      "kind": "StorageClass",
+      "version": "v1",
+      "latestPath": "storage.k8s.io/storageclass_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/storage.k8s.io/storageclass_v1.json",
+      "description": "StorageClass describes the parameters for a class of storage for which PersistentVolumes can be dynamically provisioned.\n\nStorageClasses are non-namespaced; the name of the storage class according to "
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "storage.k8s.io",
+      "kind": "VolumeAttachment",
+      "version": "v1",
+      "latestPath": "storage.k8s.io/volumeattachment_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/storage.k8s.io/volumeattachment_v1.json",
+      "description": "VolumeAttachment captures the intent to attach or detach the specified volume to/from the specified node.\n\nVolumeAttachment objects are non-namespaced."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "storage.k8s.io",
+      "kind": "VolumeAttributesClass",
+      "version": "v1",
+      "latestPath": "storage.k8s.io/volumeattributesclass_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/storage.k8s.io/volumeattributesclass_v1.json",
+      "description": "VolumeAttributesClass represents a specification of mutable volume attributes defined by the CSI driver. The class can be specified during dynamic provisioning of PersistentVolumeClaims, and changed i"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "storage.k8s.io",
+      "kind": "VolumeAttributesClass",
+      "version": "v1beta1",
+      "latestPath": "storage.k8s.io/volumeattributesclass_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/storage.k8s.io/volumeattributesclass_v1beta1.json",
+      "description": "VolumeAttributesClass represents a specification of mutable volume attributes defined by the CSI driver. The class can be specified during dynamic provisioning of PersistentVolumeClaims, and changed i"
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "storagemigration.k8s.io",
+      "kind": "StorageVersionMigration",
+      "version": "v1beta1",
+      "latestPath": "storagemigration.k8s.io/storageversionmigration_v1beta1.json",
+      "pinnedPath": "kubernetes/v1.36.2/storagemigration.k8s.io/storageversionmigration_v1beta1.json",
+      "description": "StorageVersionMigration represents a migration of stored data to the latest storage version."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "apiextensions.k8s.io",
+      "kind": "CustomResourceDefinition",
+      "version": "v1",
+      "latestPath": "apiextensions.k8s.io/customresourcedefinition_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/apiextensions.k8s.io/customresourcedefinition_v1.json",
+      "description": "CustomResourceDefinition represents a resource that should be exposed on the API server.  Its name MUST be in the format <.spec.name>.<.spec.group>."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "APIGroup",
+      "version": "v1",
+      "latestPath": "core/apigroup_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/apigroup_v1.json",
+      "description": "APIGroup contains the name, the supported versions, and the preferred version of a group."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "APIVersions",
+      "version": "v1",
+      "latestPath": "core/apiversions_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/apiversions_v1.json",
+      "description": "APIVersions lists the versions that are available, to allow clients to discover the API at /api, which is the root path of the legacy v1 API."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "core",
+      "kind": "Status",
+      "version": "v1",
+      "latestPath": "core/status_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/core/status_v1.json",
+      "description": "Status is a return value for calls that don't return other objects."
+    },
+    {
+      "source": "kubernetes",
+      "sourceVersion": "v1.36.2",
+      "group": "apiregistration.k8s.io",
+      "kind": "APIService",
+      "version": "v1",
+      "latestPath": "apiregistration.k8s.io/apiservice_v1.json",
+      "pinnedPath": "kubernetes/v1.36.2/apiregistration.k8s.io/apiservice_v1.json",
+      "description": "APIService represents a server for a particular GroupVersion. Name must be \"version.group\"."
+    },
+    {
+      "source": "kustomize",
+      "sourceVersion": "schemastore",
+      "group": "kustomize.config.k8s.io",
+      "kind": "Kustomization",
+      "version": "v1beta1",
+      "latestPath": "kustomize.config.k8s.io/kustomization_v1beta1.json",
+      "pinnedPath": "kustomize/schemastore/kustomize.config.k8s.io/kustomization_v1beta1.json",
+      "description": ""
+    },
+    {
+      "source": "kustomize",
+      "sourceVersion": "schemastore",
+      "group": "kustomize.config.k8s.io",
+      "kind": "Component",
+      "version": "v1alpha1",
+      "latestPath": "kustomize.config.k8s.io/component_v1alpha1.json",
+      "pinnedPath": "kustomize/schemastore/kustomize.config.k8s.io/component_v1alpha1.json",
+      "description": ""
+    },
+    {
       "source": "gateway-api",
       "sourceVersion": "v1.6.0",
       "group": "gateway.networking.k8s.io",
