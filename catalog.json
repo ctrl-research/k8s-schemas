@@ -1,0 +1,1654 @@
+{
+  "schemas": [
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "BackendTLSPolicy",
+      "version": "v1",
+      "latestPath": "gateway.networking.k8s.io/backendtlspolicy_v1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/backendtlspolicy_v1.json",
+      "description": "BackendTLSPolicy provides a way to configure how a Gateway\nconnects to a Backend via TLS."
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "BackendTLSPolicy",
+      "version": "v1alpha3",
+      "latestPath": "gateway.networking.k8s.io/backendtlspolicy_v1alpha3.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/backendtlspolicy_v1alpha3.json",
+      "description": "BackendTLSPolicy provides a way to configure how a Gateway\nconnects to a Backend via TLS."
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "GatewayClass",
+      "version": "v1",
+      "latestPath": "gateway.networking.k8s.io/gatewayclass_v1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/gatewayclass_v1.json",
+      "description": "GatewayClass describes a class of Gateways available to the user for creating\nGateway resources.\n\nIt is recommended that this resource be used as a template for Gateways. This\nmeans that a Gateway is "
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "GatewayClass",
+      "version": "v1beta1",
+      "latestPath": "gateway.networking.k8s.io/gatewayclass_v1beta1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/gatewayclass_v1beta1.json",
+      "description": "GatewayClass describes a class of Gateways available to the user for creating\nGateway resources.\n\nIt is recommended that this resource be used as a template for Gateways. This\nmeans that a Gateway is "
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "Gateway",
+      "version": "v1",
+      "latestPath": "gateway.networking.k8s.io/gateway_v1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/gateway_v1.json",
+      "description": "Gateway represents an instance of a service-traffic handling infrastructure\nby binding Listeners to a set of IP addresses.\nA Gateway name SHOULD be compliant with RFC 1035, consisting of a maximum of "
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "Gateway",
+      "version": "v1beta1",
+      "latestPath": "gateway.networking.k8s.io/gateway_v1beta1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/gateway_v1beta1.json",
+      "description": "Gateway represents an instance of a service-traffic handling infrastructure\nby binding Listeners to a set of IP addresses."
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "GRPCRoute",
+      "version": "v1",
+      "latestPath": "gateway.networking.k8s.io/grpcroute_v1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/grpcroute_v1.json",
+      "description": "GRPCRoute provides a way to route gRPC requests. This includes the capability\nto match requests by hostname, gRPC service, gRPC method, or HTTP/2 header.\nFilters can be used to specify additional proc"
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "HTTPRoute",
+      "version": "v1",
+      "latestPath": "gateway.networking.k8s.io/httproute_v1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/httproute_v1.json",
+      "description": "HTTPRoute provides a way to route HTTP requests. This includes the capability\nto match requests by hostname, path, header, or query param. Filters can be\nused to specify additional processing steps. B"
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "HTTPRoute",
+      "version": "v1beta1",
+      "latestPath": "gateway.networking.k8s.io/httproute_v1beta1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/httproute_v1beta1.json",
+      "description": "HTTPRoute provides a way to route HTTP requests. This includes the capability\nto match requests by hostname, path, header, or query param. Filters can be\nused to specify additional processing steps. B"
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "ListenerSet",
+      "version": "v1",
+      "latestPath": "gateway.networking.k8s.io/listenerset_v1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/listenerset_v1.json",
+      "description": "ListenerSet defines a set of additional listeners to attach to an existing Gateway.\nThis resource provides a mechanism to merge multiple listeners into a single Gateway.\n\nThe parent Gateway must expli"
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "ReferenceGrant",
+      "version": "v1",
+      "latestPath": "gateway.networking.k8s.io/referencegrant_v1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/referencegrant_v1.json",
+      "description": "ReferenceGrant identifies kinds of resources in other namespaces that are\ntrusted to reference the specified kinds of resources in the same namespace\nas the policy.\n\nEach ReferenceGrant can be used to"
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "ReferenceGrant",
+      "version": "v1beta1",
+      "latestPath": "gateway.networking.k8s.io/referencegrant_v1beta1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/referencegrant_v1beta1.json",
+      "description": "ReferenceGrant identifies kinds of resources in other namespaces that are\ntrusted to reference the specified kinds of resources in the same namespace\nas the policy.\n\nEach ReferenceGrant can be used to"
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "TCPRoute",
+      "version": "v1",
+      "latestPath": "gateway.networking.k8s.io/tcproute_v1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/tcproute_v1.json",
+      "description": "TCPRoute provides a way to route TCP requests. When combined with a Gateway\nlistener, it can be used to forward connections on the port specified by the\nlistener to a set of backends specified by the "
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "TCPRoute",
+      "version": "v1alpha2",
+      "latestPath": "gateway.networking.k8s.io/tcproute_v1alpha2.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/tcproute_v1alpha2.json",
+      "description": "TCPRoute provides a way to route TCP requests. When combined with a Gateway\nlistener, it can be used to forward connections on the port specified by the\nlistener to a set of backends specified by the "
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "TLSRoute",
+      "version": "v1",
+      "latestPath": "gateway.networking.k8s.io/tlsroute_v1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/tlsroute_v1.json",
+      "description": "The TLSRoute resource is similar to TCPRoute, but can be configured\nto match against TLS-specific metadata. This allows more flexibility\nin matching streams for a given TLS listener.\n\nIf you need to f"
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "TLSRoute",
+      "version": "v1alpha2",
+      "latestPath": "gateway.networking.k8s.io/tlsroute_v1alpha2.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/tlsroute_v1alpha2.json",
+      "description": "The TLSRoute resource is similar to TCPRoute, but can be configured\nto match against TLS-specific metadata. This allows more flexibility\nin matching streams for a given TLS listener."
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "TLSRoute",
+      "version": "v1alpha3",
+      "latestPath": "gateway.networking.k8s.io/tlsroute_v1alpha3.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/tlsroute_v1alpha3.json",
+      "description": "The TLSRoute resource is similar to TCPRoute, but can be configured\nto match against TLS-specific metadata. This allows more flexibility\nin matching streams for a given TLS listener.\n\nIf you need to f"
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "UDPRoute",
+      "version": "v1",
+      "latestPath": "gateway.networking.k8s.io/udproute_v1.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/udproute_v1.json",
+      "description": "UDPRoute provides a way to route UDP traffic. When combined with a Gateway\nlistener, it can be used to forward traffic on the port specified by the\nlistener to a set of backends specified by the UDPRo"
+    },
+    {
+      "source": "gateway-api",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "UDPRoute",
+      "version": "v1alpha2",
+      "latestPath": "gateway.networking.k8s.io/udproute_v1alpha2.json",
+      "pinnedPath": "gateway-api/v1.6.0/gateway.networking.k8s.io/udproute_v1alpha2.json",
+      "description": "UDPRoute provides a way to route UDP traffic. When combined with a Gateway\nlistener, it can be used to forward traffic on the port specified by the\nlistener to a set of backends specified by the UDPRo"
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "notification.toolkit.fluxcd.io",
+      "kind": "Alert",
+      "version": "v1beta3",
+      "latestPath": "notification.toolkit.fluxcd.io/alert_v1beta3.json",
+      "pinnedPath": "flux/v2.9.1/notification.toolkit.fluxcd.io/alert_v1beta3.json",
+      "description": "Alert is the Schema for the alerts API"
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "source.extensions.fluxcd.io",
+      "kind": "ArtifactGenerator",
+      "version": "v1beta1",
+      "latestPath": "source.extensions.fluxcd.io/artifactgenerator_v1beta1.json",
+      "pinnedPath": "flux/v2.9.1/source.extensions.fluxcd.io/artifactgenerator_v1beta1.json",
+      "description": "ArtifactGenerator is the Schema for the artifactgenerators API."
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "source.toolkit.fluxcd.io",
+      "kind": "Bucket",
+      "version": "v1",
+      "latestPath": "source.toolkit.fluxcd.io/bucket_v1.json",
+      "pinnedPath": "flux/v2.9.1/source.toolkit.fluxcd.io/bucket_v1.json",
+      "description": "Bucket is the Schema for the buckets API."
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "source.toolkit.fluxcd.io",
+      "kind": "ExternalArtifact",
+      "version": "v1",
+      "latestPath": "source.toolkit.fluxcd.io/externalartifact_v1.json",
+      "pinnedPath": "flux/v2.9.1/source.toolkit.fluxcd.io/externalartifact_v1.json",
+      "description": "ExternalArtifact is the Schema for the external artifacts API"
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "source.toolkit.fluxcd.io",
+      "kind": "GitRepository",
+      "version": "v1",
+      "latestPath": "source.toolkit.fluxcd.io/gitrepository_v1.json",
+      "pinnedPath": "flux/v2.9.1/source.toolkit.fluxcd.io/gitrepository_v1.json",
+      "description": "GitRepository is the Schema for the gitrepositories API."
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "source.toolkit.fluxcd.io",
+      "kind": "HelmChart",
+      "version": "v1",
+      "latestPath": "source.toolkit.fluxcd.io/helmchart_v1.json",
+      "pinnedPath": "flux/v2.9.1/source.toolkit.fluxcd.io/helmchart_v1.json",
+      "description": "HelmChart is the Schema for the helmcharts API."
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "helm.toolkit.fluxcd.io",
+      "kind": "HelmRelease",
+      "version": "v2",
+      "latestPath": "helm.toolkit.fluxcd.io/helmrelease_v2.json",
+      "pinnedPath": "flux/v2.9.1/helm.toolkit.fluxcd.io/helmrelease_v2.json",
+      "description": "HelmRelease is the Schema for the helmreleases API"
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "source.toolkit.fluxcd.io",
+      "kind": "HelmRepository",
+      "version": "v1",
+      "latestPath": "source.toolkit.fluxcd.io/helmrepository_v1.json",
+      "pinnedPath": "flux/v2.9.1/source.toolkit.fluxcd.io/helmrepository_v1.json",
+      "description": "HelmRepository is the Schema for the helmrepositories API."
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "image.toolkit.fluxcd.io",
+      "kind": "ImagePolicy",
+      "version": "v1",
+      "latestPath": "image.toolkit.fluxcd.io/imagepolicy_v1.json",
+      "pinnedPath": "flux/v2.9.1/image.toolkit.fluxcd.io/imagepolicy_v1.json",
+      "description": "ImagePolicy is the Schema for the imagepolicies API"
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "image.toolkit.fluxcd.io",
+      "kind": "ImageRepository",
+      "version": "v1",
+      "latestPath": "image.toolkit.fluxcd.io/imagerepository_v1.json",
+      "pinnedPath": "flux/v2.9.1/image.toolkit.fluxcd.io/imagerepository_v1.json",
+      "description": "ImageRepository is the Schema for the imagerepositories API"
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "image.toolkit.fluxcd.io",
+      "kind": "ImageUpdateAutomation",
+      "version": "v1",
+      "latestPath": "image.toolkit.fluxcd.io/imageupdateautomation_v1.json",
+      "pinnedPath": "flux/v2.9.1/image.toolkit.fluxcd.io/imageupdateautomation_v1.json",
+      "description": "ImageUpdateAutomation is the Schema for the imageupdateautomations API"
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "kustomize.toolkit.fluxcd.io",
+      "kind": "Kustomization",
+      "version": "v1",
+      "latestPath": "kustomize.toolkit.fluxcd.io/kustomization_v1.json",
+      "pinnedPath": "flux/v2.9.1/kustomize.toolkit.fluxcd.io/kustomization_v1.json",
+      "description": "Kustomization is the Schema for the kustomizations API."
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "source.toolkit.fluxcd.io",
+      "kind": "OCIRepository",
+      "version": "v1",
+      "latestPath": "source.toolkit.fluxcd.io/ocirepository_v1.json",
+      "pinnedPath": "flux/v2.9.1/source.toolkit.fluxcd.io/ocirepository_v1.json",
+      "description": "OCIRepository is the Schema for the ocirepositories API"
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "notification.toolkit.fluxcd.io",
+      "kind": "Provider",
+      "version": "v1beta3",
+      "latestPath": "notification.toolkit.fluxcd.io/provider_v1beta3.json",
+      "pinnedPath": "flux/v2.9.1/notification.toolkit.fluxcd.io/provider_v1beta3.json",
+      "description": "Provider is the Schema for the providers API"
+    },
+    {
+      "source": "flux",
+      "sourceVersion": "v2.9.1",
+      "group": "notification.toolkit.fluxcd.io",
+      "kind": "Receiver",
+      "version": "v1",
+      "latestPath": "notification.toolkit.fluxcd.io/receiver_v1.json",
+      "pinnedPath": "flux/v2.9.1/notification.toolkit.fluxcd.io/receiver_v1.json",
+      "description": "Receiver is the Schema for the receivers API."
+    },
+    {
+      "source": "flux-operator",
+      "sourceVersion": "0.37.0",
+      "group": "fluxcd.controlplane.io",
+      "kind": "FluxInstance",
+      "version": "v1",
+      "latestPath": "fluxcd.controlplane.io/fluxinstance_v1.json",
+      "pinnedPath": "flux-operator/0.37.0/fluxcd.controlplane.io/fluxinstance_v1.json",
+      "description": "FluxInstance is the Schema for the fluxinstances API"
+    },
+    {
+      "source": "flux-operator",
+      "sourceVersion": "0.37.0",
+      "group": "fluxcd.controlplane.io",
+      "kind": "FluxReport",
+      "version": "v1",
+      "latestPath": "fluxcd.controlplane.io/fluxreport_v1.json",
+      "pinnedPath": "flux-operator/0.37.0/fluxcd.controlplane.io/fluxreport_v1.json",
+      "description": "FluxReport is the Schema for the fluxreports API."
+    },
+    {
+      "source": "flux-operator",
+      "sourceVersion": "0.37.0",
+      "group": "fluxcd.controlplane.io",
+      "kind": "ResourceSetInputProvider",
+      "version": "v1",
+      "latestPath": "fluxcd.controlplane.io/resourcesetinputprovider_v1.json",
+      "pinnedPath": "flux-operator/0.37.0/fluxcd.controlplane.io/resourcesetinputprovider_v1.json",
+      "description": "ResourceSetInputProvider is the Schema for the ResourceSetInputProviders API."
+    },
+    {
+      "source": "flux-operator",
+      "sourceVersion": "0.37.0",
+      "group": "fluxcd.controlplane.io",
+      "kind": "ResourceSet",
+      "version": "v1",
+      "latestPath": "fluxcd.controlplane.io/resourceset_v1.json",
+      "pinnedPath": "flux-operator/0.37.0/fluxcd.controlplane.io/resourceset_v1.json",
+      "description": "ResourceSet is the Schema for the ResourceSets API."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "BackendTLSPolicy",
+      "version": "v1",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/backendtlspolicy_v1.json",
+      "description": "BackendTLSPolicy provides a way to configure how a Gateway\nconnects to a Backend via TLS."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "BackendTLSPolicy",
+      "version": "v1alpha3",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/backendtlspolicy_v1alpha3.json",
+      "description": "BackendTLSPolicy provides a way to configure how a Gateway\nconnects to a Backend via TLS."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "GatewayClass",
+      "version": "v1",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/gatewayclass_v1.json",
+      "description": "GatewayClass describes a class of Gateways available to the user for creating\nGateway resources.\n\nIt is recommended that this resource be used as a template for Gateways. This\nmeans that a Gateway is "
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "GatewayClass",
+      "version": "v1beta1",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/gatewayclass_v1beta1.json",
+      "description": "GatewayClass describes a class of Gateways available to the user for creating\nGateway resources.\n\nIt is recommended that this resource be used as a template for Gateways. This\nmeans that a Gateway is "
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "Gateway",
+      "version": "v1",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/gateway_v1.json",
+      "description": "Gateway represents an instance of a service-traffic handling infrastructure\nby binding Listeners to a set of IP addresses."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "Gateway",
+      "version": "v1beta1",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/gateway_v1beta1.json",
+      "description": "Gateway represents an instance of a service-traffic handling infrastructure\nby binding Listeners to a set of IP addresses."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "GRPCRoute",
+      "version": "v1",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/grpcroute_v1.json",
+      "description": "GRPCRoute provides a way to route gRPC requests. This includes the capability\nto match requests by hostname, gRPC service, gRPC method, or HTTP/2 header.\nFilters can be used to specify additional proc"
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "HTTPRoute",
+      "version": "v1",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/httproute_v1.json",
+      "description": "HTTPRoute provides a way to route HTTP requests. This includes the capability\nto match requests by hostname, path, header, or query param. Filters can be\nused to specify additional processing steps. B"
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "HTTPRoute",
+      "version": "v1beta1",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/httproute_v1beta1.json",
+      "description": "HTTPRoute provides a way to route HTTP requests. This includes the capability\nto match requests by hostname, path, header, or query param. Filters can be\nused to specify additional processing steps. B"
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "ReferenceGrant",
+      "version": "v1beta1",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/referencegrant_v1beta1.json",
+      "description": "ReferenceGrant identifies kinds of resources in other namespaces that are\ntrusted to reference the specified kinds of resources in the same namespace\nas the policy.\n\nEach ReferenceGrant can be used to"
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "TCPRoute",
+      "version": "v1alpha2",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/tcproute_v1alpha2.json",
+      "description": "TCPRoute provides a way to route TCP requests. When combined with a Gateway\nlistener, it can be used to forward connections on the port specified by the\nlistener to a set of backends specified by the "
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "TLSRoute",
+      "version": "v1alpha2",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/tlsroute_v1alpha2.json",
+      "description": "The TLSRoute resource is similar to TCPRoute, but can be configured\nto match against TLS-specific metadata. This allows more flexibility\nin matching streams for a given TLS listener.\n\nIf you need to f"
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "TLSRoute",
+      "version": "v1alpha3",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/tlsroute_v1alpha3.json",
+      "description": "The TLSRoute resource is similar to TCPRoute, but can be configured\nto match against TLS-specific metadata. This allows more flexibility\nin matching streams for a given TLS listener.\n\nIf you need to f"
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.k8s.io",
+      "kind": "UDPRoute",
+      "version": "v1alpha2",
+      "latestPath": null,
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.k8s.io/udproute_v1alpha2.json",
+      "description": "UDPRoute provides a way to route UDP traffic. When combined with a Gateway\nlistener, it can be used to forward traffic on the port specified by the\nlistener to a set of backends specified by the UDPRo"
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.x-k8s.io",
+      "kind": "XBackendTrafficPolicy",
+      "version": "v1alpha1",
+      "latestPath": "gateway.networking.x-k8s.io/xbackendtrafficpolicy_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.x-k8s.io/xbackendtrafficpolicy_v1alpha1.json",
+      "description": "XBackendTrafficPolicy defines the configuration for how traffic to a\ntarget backend should be handled."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.x-k8s.io",
+      "kind": "XListenerSet",
+      "version": "v1alpha1",
+      "latestPath": "gateway.networking.x-k8s.io/xlistenerset_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.x-k8s.io/xlistenerset_v1alpha1.json",
+      "description": "XListenerSet defines a set of additional listeners to attach to an existing Gateway.\nThis resource provides a mechanism to merge multiple listeners into a single Gateway.\n\nThe parent Gateway must expl"
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.networking.x-k8s.io",
+      "kind": "XMesh",
+      "version": "v1alpha1",
+      "latestPath": "gateway.networking.x-k8s.io/xmesh_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.networking.x-k8s.io/xmesh_v1alpha1.json",
+      "description": "XMesh defines mesh-wide characteristics of a GAMMA-compliant service mesh."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.envoyproxy.io",
+      "kind": "Backend",
+      "version": "v1alpha1",
+      "latestPath": "gateway.envoyproxy.io/backend_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.envoyproxy.io/backend_v1alpha1.json",
+      "description": "Backend allows the user to configure the endpoints of a backend and\nthe behavior of the connection from Envoy Proxy to the backend."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.envoyproxy.io",
+      "kind": "BackendTrafficPolicy",
+      "version": "v1alpha1",
+      "latestPath": "gateway.envoyproxy.io/backendtrafficpolicy_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.envoyproxy.io/backendtrafficpolicy_v1alpha1.json",
+      "description": "BackendTrafficPolicy allows the user to configure the behavior of the connection\nbetween the Envoy Proxy listener and the backend service."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.envoyproxy.io",
+      "kind": "ClientTrafficPolicy",
+      "version": "v1alpha1",
+      "latestPath": "gateway.envoyproxy.io/clienttrafficpolicy_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.envoyproxy.io/clienttrafficpolicy_v1alpha1.json",
+      "description": "ClientTrafficPolicy allows the user to configure the behavior of the connection\nbetween the downstream client and Envoy Proxy listener."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.envoyproxy.io",
+      "kind": "EnvoyExtensionPolicy",
+      "version": "v1alpha1",
+      "latestPath": "gateway.envoyproxy.io/envoyextensionpolicy_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.envoyproxy.io/envoyextensionpolicy_v1alpha1.json",
+      "description": "EnvoyExtensionPolicy allows the user to configure various envoy extensibility options for the Gateway."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.envoyproxy.io",
+      "kind": "EnvoyPatchPolicy",
+      "version": "v1alpha1",
+      "latestPath": "gateway.envoyproxy.io/envoypatchpolicy_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.envoyproxy.io/envoypatchpolicy_v1alpha1.json",
+      "description": "EnvoyPatchPolicy allows the user to modify the generated Envoy xDS\nresources by Envoy Gateway using this patch API"
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.envoyproxy.io",
+      "kind": "EnvoyProxy",
+      "version": "v1alpha1",
+      "latestPath": "gateway.envoyproxy.io/envoyproxy_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.envoyproxy.io/envoyproxy_v1alpha1.json",
+      "description": "EnvoyProxy is the schema for the envoyproxies API."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.envoyproxy.io",
+      "kind": "HTTPRouteFilter",
+      "version": "v1alpha1",
+      "latestPath": "gateway.envoyproxy.io/httproutefilter_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.envoyproxy.io/httproutefilter_v1alpha1.json",
+      "description": "HTTPRouteFilter is a custom Envoy Gateway HTTPRouteFilter which provides extended\ntraffic processing options such as path regex rewrite, direct response and more."
+    },
+    {
+      "source": "envoy-gateway",
+      "sourceVersion": "v1.6.0",
+      "group": "gateway.envoyproxy.io",
+      "kind": "SecurityPolicy",
+      "version": "v1alpha1",
+      "latestPath": "gateway.envoyproxy.io/securitypolicy_v1alpha1.json",
+      "pinnedPath": "envoy-gateway/v1.6.0/gateway.envoyproxy.io/securitypolicy_v1alpha1.json",
+      "description": "SecurityPolicy allows the user to configure various security settings for a\nGateway."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "ACRAccessToken",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/acraccesstoken_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/acraccesstoken_v1alpha1.json",
+      "description": "ACRAccessToken returns an Azure Container Registry token\nthat can be used for pushing/pulling images.\nNote: by default it will return an ACR Refresh Token with full access\n(depending on the identity)."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "external-secrets.io",
+      "kind": "ClusterExternalSecret",
+      "version": "v1",
+      "latestPath": "external-secrets.io/clusterexternalsecret_v1.json",
+      "pinnedPath": "external-secrets/0.19.2/external-secrets.io/clusterexternalsecret_v1.json",
+      "description": "ClusterExternalSecret is the Schema for the clusterexternalsecrets API."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "external-secrets.io",
+      "kind": "ClusterExternalSecret",
+      "version": "v1beta1",
+      "latestPath": "external-secrets.io/clusterexternalsecret_v1beta1.json",
+      "pinnedPath": "external-secrets/0.19.2/external-secrets.io/clusterexternalsecret_v1beta1.json",
+      "description": "ClusterExternalSecret is the Schema for the clusterexternalsecrets API."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "ClusterGenerator",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/clustergenerator_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/clustergenerator_v1alpha1.json",
+      "description": "ClusterGenerator represents a cluster-wide generator which can be referenced as part of `generatorRef` fields."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "external-secrets.io",
+      "kind": "ClusterPushSecret",
+      "version": "v1alpha1",
+      "latestPath": "external-secrets.io/clusterpushsecret_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/external-secrets.io/clusterpushsecret_v1alpha1.json",
+      "description": ""
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "external-secrets.io",
+      "kind": "ClusterSecretStore",
+      "version": "v1",
+      "latestPath": "external-secrets.io/clustersecretstore_v1.json",
+      "pinnedPath": "external-secrets/0.19.2/external-secrets.io/clustersecretstore_v1.json",
+      "description": "ClusterSecretStore represents a secure external location for storing secrets, which can be referenced as part of `storeRef` fields."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "external-secrets.io",
+      "kind": "ClusterSecretStore",
+      "version": "v1beta1",
+      "latestPath": "external-secrets.io/clustersecretstore_v1beta1.json",
+      "pinnedPath": "external-secrets/0.19.2/external-secrets.io/clustersecretstore_v1beta1.json",
+      "description": "ClusterSecretStore represents a secure external location for storing secrets, which can be referenced as part of `storeRef` fields."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "ECRAuthorizationToken",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/ecrauthorizationtoken_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/ecrauthorizationtoken_v1alpha1.json",
+      "description": "ECRAuthorizationTokenSpec uses the GetAuthorizationToken API to retrieve an\nauthorization token.\nThe authorization token is valid for 12 hours.\nThe authorizationToken returned is a base64 encoded stri"
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "external-secrets.io",
+      "kind": "ExternalSecret",
+      "version": "v1",
+      "latestPath": "external-secrets.io/externalsecret_v1.json",
+      "pinnedPath": "external-secrets/0.19.2/external-secrets.io/externalsecret_v1.json",
+      "description": "ExternalSecret is the Schema for the external-secrets API."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "external-secrets.io",
+      "kind": "ExternalSecret",
+      "version": "v1beta1",
+      "latestPath": "external-secrets.io/externalsecret_v1beta1.json",
+      "pinnedPath": "external-secrets/0.19.2/external-secrets.io/externalsecret_v1beta1.json",
+      "description": "ExternalSecret is the Schema for the external-secrets API."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "Fake",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/fake_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/fake_v1alpha1.json",
+      "description": "Fake generator is used for testing. It lets you define\na static set of credentials that is always returned."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "GCRAccessToken",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/gcraccesstoken_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/gcraccesstoken_v1alpha1.json",
+      "description": "GCRAccessToken generates an GCP access token\nthat can be used to authenticate with GCR."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "GeneratorState",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/generatorstate_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/generatorstate_v1alpha1.json",
+      "description": ""
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "GithubAccessToken",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/githubaccesstoken_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/githubaccesstoken_v1alpha1.json",
+      "description": "GithubAccessToken generates ghs_ accessToken"
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "Grafana",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/grafana_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/grafana_v1alpha1.json",
+      "description": ""
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "MFA",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/mfa_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/mfa_v1alpha1.json",
+      "description": "MFA generates a new TOTP token that is compliant with RFC 6238."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "Password",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/password_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/password_v1alpha1.json",
+      "description": "Password generates a random password based on the\nconfiguration parameters in spec.\nYou can specify the length, characterset and other attributes."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "external-secrets.io",
+      "kind": "PushSecret",
+      "version": "v1alpha1",
+      "latestPath": "external-secrets.io/pushsecret_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/external-secrets.io/pushsecret_v1alpha1.json",
+      "description": ""
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "QuayAccessToken",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/quayaccesstoken_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/quayaccesstoken_v1alpha1.json",
+      "description": "QuayAccessToken generates Quay oauth token for pulling/pushing images"
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "external-secrets.io",
+      "kind": "SecretStore",
+      "version": "v1",
+      "latestPath": "external-secrets.io/secretstore_v1.json",
+      "pinnedPath": "external-secrets/0.19.2/external-secrets.io/secretstore_v1.json",
+      "description": "SecretStore represents a secure external location for storing secrets, which can be referenced as part of `storeRef` fields."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "external-secrets.io",
+      "kind": "SecretStore",
+      "version": "v1beta1",
+      "latestPath": "external-secrets.io/secretstore_v1beta1.json",
+      "pinnedPath": "external-secrets/0.19.2/external-secrets.io/secretstore_v1beta1.json",
+      "description": "SecretStore represents a secure external location for storing secrets, which can be referenced as part of `storeRef` fields."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "SSHKey",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/sshkey_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/sshkey_v1alpha1.json",
+      "description": "SSHKey generates SSH key pairs."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "STSSessionToken",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/stssessiontoken_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/stssessiontoken_v1alpha1.json",
+      "description": "STSSessionToken uses the GetSessionToken API to retrieve an authorization token.\nThe authorization token is valid for 12 hours.\nThe authorizationToken returned is a base64 encoded string that can be d"
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "UUID",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/uuid_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/uuid_v1alpha1.json",
+      "description": "UUID generates a version 1 UUID (e56657e3-764f-11ef-a397-65231a88c216)."
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "VaultDynamicSecret",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/vaultdynamicsecret_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/vaultdynamicsecret_v1alpha1.json",
+      "description": ""
+    },
+    {
+      "source": "external-secrets",
+      "sourceVersion": "0.19.2",
+      "group": "generators.external-secrets.io",
+      "kind": "Webhook",
+      "version": "v1alpha1",
+      "latestPath": "generators.external-secrets.io/webhook_v1alpha1.json",
+      "pinnedPath": "external-secrets/0.19.2/generators.external-secrets.io/webhook_v1alpha1.json",
+      "description": "Webhook connects to a third party API server to handle the secrets generation\nconfiguration parameters in spec.\nYou can specify the server, the token, and additional body parameters.\nSee documentation"
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "metallb.io",
+      "kind": "BFDProfile",
+      "version": "v1beta1",
+      "latestPath": "metallb.io/bfdprofile_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/metallb.io/bfdprofile_v1beta1.json",
+      "description": "BFDProfile represents the settings of the bfd session that can be\noptionally associated with a BGP session."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "metallb.io",
+      "kind": "BGPAdvertisement",
+      "version": "v1beta1",
+      "latestPath": "metallb.io/bgpadvertisement_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/metallb.io/bgpadvertisement_v1beta1.json",
+      "description": "BGPAdvertisement allows to advertise the IPs coming\nfrom the selected IPAddressPools via BGP, setting the parameters of the\nBGP Advertisement."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "metallb.io",
+      "kind": "BGPPeer",
+      "version": "v1beta1",
+      "latestPath": "metallb.io/bgppeer_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/metallb.io/bgppeer_v1beta1.json",
+      "description": "BGPPeer is the Schema for the peers API."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "metallb.io",
+      "kind": "BGPPeer",
+      "version": "v1beta2",
+      "latestPath": "metallb.io/bgppeer_v1beta2.json",
+      "pinnedPath": "metallb/0.16.1/metallb.io/bgppeer_v1beta2.json",
+      "description": "BGPPeer is the Schema for the peers API."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "metallb.io",
+      "kind": "Community",
+      "version": "v1beta1",
+      "latestPath": "metallb.io/community_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/metallb.io/community_v1beta1.json",
+      "description": "Community is a collection of aliases for communities.\nUsers can define named aliases to be used in the BGPPeer CRD."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "metallb.io",
+      "kind": "ConfigurationState",
+      "version": "v1beta1",
+      "latestPath": "metallb.io/configurationstate_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/metallb.io/configurationstate_v1beta1.json",
+      "description": "ConfigurationState is a status-only CRD that reports configuration validation results from MetalLB components.\nLabels:\n  - metallb.io/component-type: \"controller\" or \"speaker\"\n  - metallb.io/node-name"
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "metallb.io",
+      "kind": "IPAddressPool",
+      "version": "v1beta1",
+      "latestPath": "metallb.io/ipaddresspool_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/metallb.io/ipaddresspool_v1beta1.json",
+      "description": "IPAddressPool represents a pool of IP addresses that can be allocated\nto LoadBalancer services."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "metallb.io",
+      "kind": "L2Advertisement",
+      "version": "v1beta1",
+      "latestPath": "metallb.io/l2advertisement_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/metallb.io/l2advertisement_v1beta1.json",
+      "description": "L2Advertisement allows to advertise the LoadBalancer IPs provided\nby the selected pools via L2."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "metallb.io",
+      "kind": "ServiceBGPStatus",
+      "version": "v1beta1",
+      "latestPath": "metallb.io/servicebgpstatus_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/metallb.io/servicebgpstatus_v1beta1.json",
+      "description": "ServiceBGPStatus exposes the BGP peers a service is configured to be advertised to, per relevant node."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "metallb.io",
+      "kind": "ServiceL2Status",
+      "version": "v1beta1",
+      "latestPath": "metallb.io/servicel2status_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/metallb.io/servicel2status_v1beta1.json",
+      "description": "ServiceL2Status reveals the actual traffic status of loadbalancer services in layer2 mode."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "frrk8s.metallb.io",
+      "kind": "BGPSessionState",
+      "version": "v1beta1",
+      "latestPath": "frrk8s.metallb.io/bgpsessionstate_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/frrk8s.metallb.io/bgpsessionstate_v1beta1.json",
+      "description": "BGPSessionState exposes the status of a BGP Session from the FRR instance running on the node."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "frrk8s.metallb.io",
+      "kind": "FRRConfiguration",
+      "version": "v1beta1",
+      "latestPath": "frrk8s.metallb.io/frrconfiguration_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/frrk8s.metallb.io/frrconfiguration_v1beta1.json",
+      "description": "FRRConfiguration is a piece of FRR configuration."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "frrk8s.metallb.io",
+      "kind": "FRRK8sConfiguration",
+      "version": "v1beta1",
+      "latestPath": "frrk8s.metallb.io/frrk8sconfiguration_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/frrk8s.metallb.io/frrk8sconfiguration_v1beta1.json",
+      "description": "FRRK8sConfiguration holds the FRR Operator configuration with global\nsettings for the K8s and FRR."
+    },
+    {
+      "source": "metallb",
+      "sourceVersion": "0.16.1",
+      "group": "frrk8s.metallb.io",
+      "kind": "FRRNodeState",
+      "version": "v1beta1",
+      "latestPath": "frrk8s.metallb.io/frrnodestate_v1beta1.json",
+      "pinnedPath": "metallb/0.16.1/frrk8s.metallb.io/frrnodestate_v1beta1.json",
+      "description": "FRRNodeState exposes the status of the FRR instance running on each node."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VLAgent",
+      "version": "v1",
+      "latestPath": "operator.victoriametrics.com/vlagent_v1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vlagent_v1.json",
+      "description": "VLAgent - is a tiny but brave agent, which helps you collect logs from various sources and stores them in VictoriaLogs."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VLCluster",
+      "version": "v1",
+      "latestPath": "operator.victoriametrics.com/vlcluster_v1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vlcluster_v1.json",
+      "description": "VLCluster is fast, cost-effective and scalable logs database."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VLogs",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vlogs_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vlogs_v1beta1.json",
+      "description": "VLogs is fast, cost-effective and scalable logs database.\nVLogs is the Schema for the vlogs API"
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VLSingle",
+      "version": "v1",
+      "latestPath": "operator.victoriametrics.com/vlsingle_v1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vlsingle_v1.json",
+      "description": "VLSingle is fast, cost-effective and scalable logs database.\nVLSingle is the Schema for the API"
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMAgent",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmagent_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmagent_v1beta1.json",
+      "description": "VMAgent - is a tiny but brave agent, which helps you collect metrics from various sources and stores them in VictoriaMetrics\nor any other Prometheus-compatible storage system that supports the remote_"
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMAlertmanagerConfig",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmalertmanagerconfig_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmalertmanagerconfig_v1beta1.json",
+      "description": "VMAlertmanagerConfig is the Schema for the vmalertmanagerconfigs API"
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMAlertmanager",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmalertmanager_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmalertmanager_v1beta1.json",
+      "description": "VMAlertmanager represents Victoria-Metrics deployment for Alertmanager."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMAlert",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmalert_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmalert_v1beta1.json",
+      "description": "VMAlert  executes a list of given alerting or recording rules against configured address."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMAnomaly",
+      "version": "v1",
+      "latestPath": "operator.victoriametrics.com/vmanomaly_v1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmanomaly_v1.json",
+      "description": "VMAnomaly is the Schema for the vmanomalies API."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMAuth",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmauth_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmauth_v1beta1.json",
+      "description": "VMAuth is the Schema for the vmauths API"
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMCluster",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmcluster_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmcluster_v1beta1.json",
+      "description": "VMCluster is fast, cost-effective and scalable time-series database.\nCluster version with"
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMNodeScrape",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmnodescrape_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmnodescrape_v1beta1.json",
+      "description": "VMNodeScrape defines discovery for targets placed on kubernetes nodes,\nusually its node-exporters and other host services.\nInternalIP is used as __address__ for scraping."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMPodScrape",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmpodscrape_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmpodscrape_v1beta1.json",
+      "description": "VMPodScrape is scrape configuration for pods,\nit generates vmagent's config for scraping pod targets\nbased on selectors."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMProbe",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmprobe_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmprobe_v1beta1.json",
+      "description": "VMProbe defines a probe for targets, that will be executed with prober,\nlike blackbox exporter.\nIt helps to monitor reachability of target with various checks."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMRule",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmrule_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmrule_v1beta1.json",
+      "description": "VMRule defines rule records for vmalert application"
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMScrapeConfig",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmscrapeconfig_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmscrapeconfig_v1beta1.json",
+      "description": "VMScrapeConfig specifies a set of targets and parameters describing how to scrape them."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMServiceScrape",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmservicescrape_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmservicescrape_v1beta1.json",
+      "description": "VMServiceScrape is scrape configuration for endpoints associated with\nkubernetes service,\nit generates scrape configuration for vmagent based on selectors.\nresult config will scrape service endpoints"
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMSingle",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmsingle_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmsingle_v1beta1.json",
+      "description": "VMSingle  is fast, cost-effective and scalable time-series database."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMStaticScrape",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmstaticscrape_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmstaticscrape_v1beta1.json",
+      "description": "VMStaticScrape  defines static targets configuration for scraping."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VMUser",
+      "version": "v1beta1",
+      "latestPath": "operator.victoriametrics.com/vmuser_v1beta1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vmuser_v1beta1.json",
+      "description": "VMUser is the Schema for the vmusers API"
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VTCluster",
+      "version": "v1",
+      "latestPath": "operator.victoriametrics.com/vtcluster_v1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vtcluster_v1.json",
+      "description": "VTCluster is fast, cost-effective and scalable traces database."
+    },
+    {
+      "source": "victoria-metrics-operator",
+      "sourceVersion": "0.54.0",
+      "group": "operator.victoriametrics.com",
+      "kind": "VTSingle",
+      "version": "v1",
+      "latestPath": "operator.victoriametrics.com/vtsingle_v1.json",
+      "pinnedPath": "victoria-metrics-operator/0.54.0/operator.victoriametrics.com/vtsingle_v1.json",
+      "description": "VTSingle is fast, cost-effective and scalable traces database.\nVTSingle is the Schema for the API"
+    },
+    {
+      "source": "kube-prometheus-stack",
+      "sourceVersion": "75.3.3",
+      "group": "monitoring.coreos.com",
+      "kind": "AlertmanagerConfig",
+      "version": "v1alpha1",
+      "latestPath": "monitoring.coreos.com/alertmanagerconfig_v1alpha1.json",
+      "pinnedPath": "kube-prometheus-stack/75.3.3/monitoring.coreos.com/alertmanagerconfig_v1alpha1.json",
+      "description": "AlertmanagerConfig configures the Prometheus Alertmanager,\nspecifying how alerts should be grouped, inhibited and notified to external systems."
+    },
+    {
+      "source": "kube-prometheus-stack",
+      "sourceVersion": "75.3.3",
+      "group": "monitoring.coreos.com",
+      "kind": "Alertmanager",
+      "version": "v1",
+      "latestPath": "monitoring.coreos.com/alertmanager_v1.json",
+      "pinnedPath": "kube-prometheus-stack/75.3.3/monitoring.coreos.com/alertmanager_v1.json",
+      "description": "The `Alertmanager` custom resource definition (CRD) defines a desired [Alertmanager](https://prometheus.io/docs/alerting) setup to run in a Kubernetes cluster. It allows to specify many options such a"
+    },
+    {
+      "source": "kube-prometheus-stack",
+      "sourceVersion": "75.3.3",
+      "group": "monitoring.coreos.com",
+      "kind": "PodMonitor",
+      "version": "v1",
+      "latestPath": "monitoring.coreos.com/podmonitor_v1.json",
+      "pinnedPath": "kube-prometheus-stack/75.3.3/monitoring.coreos.com/podmonitor_v1.json",
+      "description": "The `PodMonitor` custom resource definition (CRD) defines how `Prometheus` and `PrometheusAgent` can scrape metrics from a group of pods.\nAmong other things, it allows to specify:\n* The pods to scrape"
+    },
+    {
+      "source": "kube-prometheus-stack",
+      "sourceVersion": "75.3.3",
+      "group": "monitoring.coreos.com",
+      "kind": "Probe",
+      "version": "v1",
+      "latestPath": "monitoring.coreos.com/probe_v1.json",
+      "pinnedPath": "kube-prometheus-stack/75.3.3/monitoring.coreos.com/probe_v1.json",
+      "description": "The `Probe` custom resource definition (CRD) defines how to scrape metrics from prober exporters such as the [blackbox exporter](https://github.com/prometheus/blackbox_exporter).\n\nThe `Probe` resource"
+    },
+    {
+      "source": "kube-prometheus-stack",
+      "sourceVersion": "75.3.3",
+      "group": "monitoring.coreos.com",
+      "kind": "PrometheusAgent",
+      "version": "v1alpha1",
+      "latestPath": "monitoring.coreos.com/prometheusagent_v1alpha1.json",
+      "pinnedPath": "kube-prometheus-stack/75.3.3/monitoring.coreos.com/prometheusagent_v1alpha1.json",
+      "description": "The `PrometheusAgent` custom resource definition (CRD) defines a desired [Prometheus Agent](https://prometheus.io/blog/2021/11/16/agent/) setup to run in a Kubernetes cluster.\n\nThe CRD is very similar"
+    },
+    {
+      "source": "kube-prometheus-stack",
+      "sourceVersion": "75.3.3",
+      "group": "monitoring.coreos.com",
+      "kind": "Prometheus",
+      "version": "v1",
+      "latestPath": "monitoring.coreos.com/prometheus_v1.json",
+      "pinnedPath": "kube-prometheus-stack/75.3.3/monitoring.coreos.com/prometheus_v1.json",
+      "description": "The `Prometheus` custom resource definition (CRD) defines a desired [Prometheus](https://prometheus.io/docs/prometheus) setup to run in a Kubernetes cluster. It allows to specify many options such as "
+    },
+    {
+      "source": "kube-prometheus-stack",
+      "sourceVersion": "75.3.3",
+      "group": "monitoring.coreos.com",
+      "kind": "PrometheusRule",
+      "version": "v1",
+      "latestPath": "monitoring.coreos.com/prometheusrule_v1.json",
+      "pinnedPath": "kube-prometheus-stack/75.3.3/monitoring.coreos.com/prometheusrule_v1.json",
+      "description": "The `PrometheusRule` custom resource definition (CRD) defines [alerting](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/) and [recording](https://prometheus.io/docs/promethe"
+    },
+    {
+      "source": "kube-prometheus-stack",
+      "sourceVersion": "75.3.3",
+      "group": "monitoring.coreos.com",
+      "kind": "ScrapeConfig",
+      "version": "v1alpha1",
+      "latestPath": "monitoring.coreos.com/scrapeconfig_v1alpha1.json",
+      "pinnedPath": "kube-prometheus-stack/75.3.3/monitoring.coreos.com/scrapeconfig_v1alpha1.json",
+      "description": "ScrapeConfig defines a namespaced Prometheus scrape_config to be aggregated across\nmultiple namespaces into the Prometheus configuration."
+    },
+    {
+      "source": "kube-prometheus-stack",
+      "sourceVersion": "75.3.3",
+      "group": "monitoring.coreos.com",
+      "kind": "ServiceMonitor",
+      "version": "v1",
+      "latestPath": "monitoring.coreos.com/servicemonitor_v1.json",
+      "pinnedPath": "kube-prometheus-stack/75.3.3/monitoring.coreos.com/servicemonitor_v1.json",
+      "description": "The `ServiceMonitor` custom resource definition (CRD) defines how `Prometheus` and `PrometheusAgent` can scrape metrics from a group of services.\nAmong other things, it allows to specify:\n* The servic"
+    },
+    {
+      "source": "kube-prometheus-stack",
+      "sourceVersion": "75.3.3",
+      "group": "monitoring.coreos.com",
+      "kind": "ThanosRuler",
+      "version": "v1",
+      "latestPath": "monitoring.coreos.com/thanosruler_v1.json",
+      "pinnedPath": "kube-prometheus-stack/75.3.3/monitoring.coreos.com/thanosruler_v1.json",
+      "description": "The `ThanosRuler` custom resource definition (CRD) defines a desired [Thanos Ruler](https://github.com/thanos-io/thanos/blob/main/docs/components/rule.md) setup to run in a Kubernetes cluster.\n\nA `Tha"
+    },
+    {
+      "source": "cloudnative-pg",
+      "sourceVersion": "0.26.1",
+      "group": "postgresql.cnpg.io",
+      "kind": "Backup",
+      "version": "v1",
+      "latestPath": "postgresql.cnpg.io/backup_v1.json",
+      "pinnedPath": "cloudnative-pg/0.26.1/postgresql.cnpg.io/backup_v1.json",
+      "description": "A Backup resource is a request for a PostgreSQL backup by the user."
+    },
+    {
+      "source": "cloudnative-pg",
+      "sourceVersion": "0.26.1",
+      "group": "postgresql.cnpg.io",
+      "kind": "ClusterImageCatalog",
+      "version": "v1",
+      "latestPath": "postgresql.cnpg.io/clusterimagecatalog_v1.json",
+      "pinnedPath": "cloudnative-pg/0.26.1/postgresql.cnpg.io/clusterimagecatalog_v1.json",
+      "description": "ClusterImageCatalog is the Schema for the clusterimagecatalogs API"
+    },
+    {
+      "source": "cloudnative-pg",
+      "sourceVersion": "0.26.1",
+      "group": "postgresql.cnpg.io",
+      "kind": "Cluster",
+      "version": "v1",
+      "latestPath": "postgresql.cnpg.io/cluster_v1.json",
+      "pinnedPath": "cloudnative-pg/0.26.1/postgresql.cnpg.io/cluster_v1.json",
+      "description": "Cluster defines the API schema for a highly available PostgreSQL database cluster\nmanaged by CloudNativePG."
+    },
+    {
+      "source": "cloudnative-pg",
+      "sourceVersion": "0.26.1",
+      "group": "postgresql.cnpg.io",
+      "kind": "Database",
+      "version": "v1",
+      "latestPath": "postgresql.cnpg.io/database_v1.json",
+      "pinnedPath": "cloudnative-pg/0.26.1/postgresql.cnpg.io/database_v1.json",
+      "description": "Database is the Schema for the databases API"
+    },
+    {
+      "source": "cloudnative-pg",
+      "sourceVersion": "0.26.1",
+      "group": "postgresql.cnpg.io",
+      "kind": "FailoverQuorum",
+      "version": "v1",
+      "latestPath": "postgresql.cnpg.io/failoverquorum_v1.json",
+      "pinnedPath": "cloudnative-pg/0.26.1/postgresql.cnpg.io/failoverquorum_v1.json",
+      "description": "FailoverQuorum contains the information about the current failover\nquorum status of a PG cluster. It is updated by the instance manager\nof the primary node and reset to zero by the operator to trigger"
+    },
+    {
+      "source": "cloudnative-pg",
+      "sourceVersion": "0.26.1",
+      "group": "postgresql.cnpg.io",
+      "kind": "ImageCatalog",
+      "version": "v1",
+      "latestPath": "postgresql.cnpg.io/imagecatalog_v1.json",
+      "pinnedPath": "cloudnative-pg/0.26.1/postgresql.cnpg.io/imagecatalog_v1.json",
+      "description": "ImageCatalog is the Schema for the imagecatalogs API"
+    },
+    {
+      "source": "cloudnative-pg",
+      "sourceVersion": "0.26.1",
+      "group": "postgresql.cnpg.io",
+      "kind": "Pooler",
+      "version": "v1",
+      "latestPath": "postgresql.cnpg.io/pooler_v1.json",
+      "pinnedPath": "cloudnative-pg/0.26.1/postgresql.cnpg.io/pooler_v1.json",
+      "description": "Pooler is the Schema for the poolers API"
+    },
+    {
+      "source": "cloudnative-pg",
+      "sourceVersion": "0.26.1",
+      "group": "postgresql.cnpg.io",
+      "kind": "Publication",
+      "version": "v1",
+      "latestPath": "postgresql.cnpg.io/publication_v1.json",
+      "pinnedPath": "cloudnative-pg/0.26.1/postgresql.cnpg.io/publication_v1.json",
+      "description": "Publication is the Schema for the publications API"
+    },
+    {
+      "source": "cloudnative-pg",
+      "sourceVersion": "0.26.1",
+      "group": "postgresql.cnpg.io",
+      "kind": "ScheduledBackup",
+      "version": "v1",
+      "latestPath": "postgresql.cnpg.io/scheduledbackup_v1.json",
+      "pinnedPath": "cloudnative-pg/0.26.1/postgresql.cnpg.io/scheduledbackup_v1.json",
+      "description": "ScheduledBackup is the Schema for the scheduledbackups API"
+    },
+    {
+      "source": "cloudnative-pg",
+      "sourceVersion": "0.26.1",
+      "group": "postgresql.cnpg.io",
+      "kind": "Subscription",
+      "version": "v1",
+      "latestPath": "postgresql.cnpg.io/subscription_v1.json",
+      "pinnedPath": "cloudnative-pg/0.26.1/postgresql.cnpg.io/subscription_v1.json",
+      "description": "Subscription is the Schema for the subscriptions API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "GrafanaAlertRuleGroup",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafanaalertrulegroup_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafanaalertrulegroup_v1beta1.json",
+      "description": "GrafanaAlertRuleGroup is the Schema for the grafanaalertrulegroups API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "GrafanaContactPoint",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafanacontactpoint_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafanacontactpoint_v1beta1.json",
+      "description": "GrafanaContactPoint is the Schema for the grafanacontactpoints API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "GrafanaDashboard",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafanadashboard_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafanadashboard_v1beta1.json",
+      "description": "GrafanaDashboard is the Schema for the grafanadashboards API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "GrafanaDatasource",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafanadatasource_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafanadatasource_v1beta1.json",
+      "description": "GrafanaDatasource is the Schema for the grafanadatasources API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "GrafanaFolder",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafanafolder_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafanafolder_v1beta1.json",
+      "description": "GrafanaFolder is the Schema for the grafanafolders API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "GrafanaLibraryPanel",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafanalibrarypanel_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafanalibrarypanel_v1beta1.json",
+      "description": "GrafanaLibraryPanel is the Schema for the grafanalibrarypanels API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "GrafanaMuteTiming",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafanamutetiming_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafanamutetiming_v1beta1.json",
+      "description": "GrafanaMuteTiming is the Schema for the GrafanaMuteTiming API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "GrafanaNotificationPolicy",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafananotificationpolicy_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafananotificationpolicy_v1beta1.json",
+      "description": "GrafanaNotificationPolicy is the Schema for the GrafanaNotificationPolicy API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "GrafanaNotificationPolicyRoute",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafananotificationpolicyroute_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafananotificationpolicyroute_v1beta1.json",
+      "description": "GrafanaNotificationPolicyRoute is the Schema for the grafananotificationpolicyroutes API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "GrafanaNotificationTemplate",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafananotificationtemplate_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafananotificationtemplate_v1beta1.json",
+      "description": "GrafanaNotificationTemplate is the Schema for the GrafanaNotificationTemplate API"
+    },
+    {
+      "source": "grafana-operator",
+      "sourceVersion": "v5.18.0",
+      "group": "grafana.integreatly.org",
+      "kind": "Grafana",
+      "version": "v1beta1",
+      "latestPath": "grafana.integreatly.org/grafana_v1beta1.json",
+      "pinnedPath": "grafana-operator/v5.18.0/grafana.integreatly.org/grafana_v1beta1.json",
+      "description": "Grafana is the Schema for the grafanas API"
+    },
+    {
+      "source": "dragonfly-operator",
+      "sourceVersion": "v1.3.0",
+      "group": "dragonflydb.io",
+      "kind": "Dragonfly",
+      "version": "v1alpha1",
+      "latestPath": "dragonflydb.io/dragonfly_v1alpha1.json",
+      "pinnedPath": "dragonfly-operator/v1.3.0/dragonflydb.io/dragonfly_v1alpha1.json",
+      "description": "Dragonfly is the Schema for the dragonflies API"
+    },
+    {
+      "source": "volsync",
+      "sourceVersion": "0.12.1",
+      "group": "volsync.backube",
+      "kind": "ReplicationDestination",
+      "version": "v1alpha1",
+      "latestPath": "volsync.backube/replicationdestination_v1alpha1.json",
+      "pinnedPath": "volsync/0.12.1/volsync.backube/replicationdestination_v1alpha1.json",
+      "description": "A ReplicationDestination is a VolSync resource that you can use to define the destination of a VolSync replication\nor synchronization."
+    },
+    {
+      "source": "volsync",
+      "sourceVersion": "0.12.1",
+      "group": "volsync.backube",
+      "kind": "ReplicationSource",
+      "version": "v1alpha1",
+      "latestPath": "volsync.backube/replicationsource_v1alpha1.json",
+      "pinnedPath": "volsync/0.12.1/volsync.backube/replicationsource_v1alpha1.json",
+      "description": "A ReplicationSource is a VolSync resource that you can use to define the source PVC and replication mover type,\nenabling you to replicate or synchronize PVC data to a remote location."
+    },
+    {
+      "source": "external-snapshotter",
+      "sourceVersion": "v8.6.0",
+      "group": "snapshot.storage.k8s.io",
+      "kind": "VolumeSnapshot",
+      "version": "v1",
+      "latestPath": "snapshot.storage.k8s.io/volumesnapshot_v1.json",
+      "pinnedPath": "external-snapshotter/v8.6.0/snapshot.storage.k8s.io/volumesnapshot_v1.json",
+      "description": "VolumeSnapshot is a user's request for either creating a point-in-time\nsnapshot of a persistent volume, or binding to a pre-existing snapshot."
+    },
+    {
+      "source": "external-snapshotter",
+      "sourceVersion": "v8.6.0",
+      "group": "snapshot.storage.k8s.io",
+      "kind": "VolumeSnapshot",
+      "version": "v1beta1",
+      "latestPath": "snapshot.storage.k8s.io/volumesnapshot_v1beta1.json",
+      "pinnedPath": "external-snapshotter/v8.6.0/snapshot.storage.k8s.io/volumesnapshot_v1beta1.json",
+      "description": "VolumeSnapshot is a user's request for either creating a point-in-time snapshot of a persistent volume, or binding to a pre-existing snapshot."
+    },
+    {
+      "source": "external-snapshotter",
+      "sourceVersion": "v8.6.0",
+      "group": "snapshot.storage.k8s.io",
+      "kind": "VolumeSnapshotClass",
+      "version": "v1",
+      "latestPath": "snapshot.storage.k8s.io/volumesnapshotclass_v1.json",
+      "pinnedPath": "external-snapshotter/v8.6.0/snapshot.storage.k8s.io/volumesnapshotclass_v1.json",
+      "description": "VolumeSnapshotClass specifies parameters that a underlying storage system uses when\ncreating a volume snapshot. A specific VolumeSnapshotClass is used by specifying its\nname in a VolumeSnapshot object"
+    },
+    {
+      "source": "external-snapshotter",
+      "sourceVersion": "v8.6.0",
+      "group": "snapshot.storage.k8s.io",
+      "kind": "VolumeSnapshotClass",
+      "version": "v1beta1",
+      "latestPath": "snapshot.storage.k8s.io/volumesnapshotclass_v1beta1.json",
+      "pinnedPath": "external-snapshotter/v8.6.0/snapshot.storage.k8s.io/volumesnapshotclass_v1beta1.json",
+      "description": "VolumeSnapshotClass specifies parameters that a underlying storage system uses when creating a volume snapshot. A specific VolumeSnapshotClass is used by specifying its name in a VolumeSnapshot object"
+    },
+    {
+      "source": "external-snapshotter",
+      "sourceVersion": "v8.6.0",
+      "group": "snapshot.storage.k8s.io",
+      "kind": "VolumeSnapshotContent",
+      "version": "v1",
+      "latestPath": "snapshot.storage.k8s.io/volumesnapshotcontent_v1.json",
+      "pinnedPath": "external-snapshotter/v8.6.0/snapshot.storage.k8s.io/volumesnapshotcontent_v1.json",
+      "description": "VolumeSnapshotContent represents the actual \"on-disk\" snapshot object in the\nunderlying storage system"
+    },
+    {
+      "source": "external-snapshotter",
+      "sourceVersion": "v8.6.0",
+      "group": "snapshot.storage.k8s.io",
+      "kind": "VolumeSnapshotContent",
+      "version": "v1beta1",
+      "latestPath": "snapshot.storage.k8s.io/volumesnapshotcontent_v1beta1.json",
+      "pinnedPath": "external-snapshotter/v8.6.0/snapshot.storage.k8s.io/volumesnapshotcontent_v1beta1.json",
+      "description": "VolumeSnapshotContent represents the actual \"on-disk\" snapshot object in the underlying storage system"
+    }
+  ]
+}
