@@ -3,33 +3,51 @@
   "properties": {
     "apiVersion": {
       "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "kind": {
       "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "name": {
       "description": "name is the name of the group.",
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "preferredVersion": {
       "description": "preferredVersion is the version preferred by the API server, which probably is the storage version.",
       "properties": {
         "groupVersion": {
           "description": "groupVersion specifies the API group and version in the form \"group/version\"",
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "version": {
           "description": "version specifies the version in the form of \"version\". This is to save the clients the trouble of splitting the GroupVersion.",
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "required": [
         "groupVersion",
         "version"
       ],
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "additionalProperties": false
     },
     "serverAddressByClientCIDRs": {
@@ -39,11 +57,17 @@
         "properties": {
           "clientCIDR": {
             "description": "The CIDR with which clients can match their IP to figure out the server address that they should use.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "serverAddress": {
             "description": "Address of this server, suitable for a client that matches the above CIDR. This can be a hostname, hostname:port, IP or IP:port.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "required": [
@@ -53,7 +77,10 @@
         "type": "object",
         "additionalProperties": false
       },
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "x-kubernetes-list-type": "atomic"
     },
     "versions": {
@@ -63,11 +90,17 @@
         "properties": {
           "groupVersion": {
             "description": "groupVersion specifies the API group and version in the form \"group/version\"",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "version": {
             "description": "version specifies the version in the form of \"version\". This is to save the clients the trouble of splitting the GroupVersion.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "required": [
@@ -77,7 +110,10 @@
         "type": "object",
         "additionalProperties": false
       },
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "x-kubernetes-list-type": "atomic"
     }
   },
