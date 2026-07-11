@@ -1,14 +1,24 @@
 # k8s-schemas
 
-Self-hosted JSON Schema catalog for Kubernetes CRDs, generated from upstream
-charts and release manifests and served over GitHub Pages:
+Self-hosted JSON Schema catalog for Kubernetes resources — CRDs from upstream
+charts and release manifests, core Kubernetes API types from the upstream
+OpenAPI spec (strict flavor: unknown fields rejected), and kustomize schemas —
+served over GitHub Pages:
 
 **https://ctrl-research.github.io/k8s-schemas/**
 
 Schemas are extracted from the exact operator versions pinned in
-[`sources.yaml`](sources.yaml) and converted from each CRD's `openAPIV3Schema`,
-so editor validation and CI validate against what the cluster actually runs —
-including full `description` text for editor hover docs.
+[`sources.yaml`](sources.yaml), so editor validation and CI validate against
+what the cluster actually runs — including full `description` text for editor
+hover docs.
+
+Generated schemas are committed to the [`gh-pages`](../../tree/gh-pages)
+branch (which Pages serves directly), so content changes are diffable per
+publish and every file is also fetchable via
+`https://raw.githubusercontent.com/ctrl-research/k8s-schemas/gh-pages/{path}`.
+Publishes are **additive**: changed files update, but nothing is ever deleted,
+so pinned-tier URLs remain valid even after versions age out of
+`extraVersions`.
 
 ## URL layout
 
@@ -17,6 +27,10 @@ including full `description` text for editor hover docs.
 {source}/{sourceVersion}/{group}/{kind}_{version}.json  # pinned tier — stable forever
 catalog.json                                            # machine-readable index
 ```
+
+Core Kubernetes types use `core/` for the empty API group
+(`core/namespace_v1.json`, `apps/deployment_v1.json`); kustomize schemas live
+under `kustomize.config.k8s.io/` including `component_v1alpha1.json`.
 
 Examples:
 
@@ -78,6 +92,8 @@ Rules of thumb:
   its CRDs behind a flag.
 - `url` sources take a list of manifest URLs with `{version}` substituted in
   (the version checker assumes these are GitHub release/raw URLs).
+- `k8s` converts core API types from the Kubernetes OpenAPI spec; `jsonschema`
+  republishes existing JSON Schema files verbatim (used for kustomize).
 - Order matters: when two sources ship the same CRD (e.g. envoy-gateway
   bundles the gateway-api CRDs), the first source in the file owns the latest
   tier; later duplicates publish to their pinned tier only.

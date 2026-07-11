@@ -45,8 +45,11 @@ def newest(versions):
 
 
 def latest_github_release(source):
-    match = re.search(r"github(?:usercontent)?\.com/([^/]+/[^/]+)", source["urls"][0])
-    repo = match.group(1)
+    if source["kind"] == "k8s":
+        repo = "kubernetes/kubernetes"
+    else:
+        match = re.search(r"github(?:usercontent)?\.com/([^/]+/[^/]+)", source["urls"][0])
+        repo = match.group(1)
     headers = {}
     if os.environ.get("GITHUB_TOKEN"):
         headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
@@ -74,7 +77,14 @@ def latest_oci_version(source):
     return newest(tags)
 
 
-RESOLVERS = {"url": latest_github_release, "helm": latest_helm_version, "oci": latest_oci_version}
+RESOLVERS = {
+    "url": latest_github_release,
+    "helm": latest_helm_version,
+    "oci": latest_oci_version,
+    "k8s": latest_github_release,
+    # schemastore republishes are rolling — always current
+    "jsonschema": lambda source: source["version"],
+}
 
 
 def rewrite_pins(text, name, old, new, existing_extra):
