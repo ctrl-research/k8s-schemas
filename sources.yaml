@@ -8,13 +8,38 @@
 # extraVersions) publishes under /{name}/{version}/.
 #
 # Source kinds:
-#   helm — chart from an HTTP helm repo (repo + chart + version)
-#   oci  — chart from an OCI registry (chart url + version)
-#   url  — raw manifest URLs; "{version}" is substituted into each url
+#   helm       — chart from an HTTP helm repo (repo + chart + version)
+#   oci        — chart from an OCI registry (chart url + version)
+#   url        — raw manifest URLs; "{version}" is substituted into each url
+#   k8s        — core Kubernetes API types from the upstream OpenAPI spec
+#   jsonschema — republish existing JSON Schema files (list under `schemas:`)
 #
 # Order matters for the catalog root: when two sources ship the same CRD
 # (e.g. envoy-gateway bundles the gateway-api CRDs), the first source wins.
 sources:
+  # Core Kubernetes API schemas, strict flavor (unknown fields rejected).
+  # The empty core group publishes under core/ (e.g. core/namespace_v1.json).
+  - name: kubernetes
+    kind: k8s
+    # renovate: datasource=github-releases depName=kubernetes/kubernetes
+    version: v1.36.2
+
+  # kustomization.yaml is not a CRD; republish the schemastore schema. Also
+  # served for Component (v1alpha1), which has no published schema of its own
+  # and shares Kustomization's fields.
+  - name: kustomize
+    kind: jsonschema
+    schemas:
+      - url: https://json.schemastore.org/kustomization.json
+        group: kustomize.config.k8s.io
+        kind: Kustomization
+        version: v1beta1
+      - url: https://json.schemastore.org/kustomization.json
+        group: kustomize.config.k8s.io
+        kind: Component
+        version: v1alpha1
+    version: schemastore
+
   - name: gateway-api
     kind: url
     urls:

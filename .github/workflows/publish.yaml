@@ -9,14 +9,14 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,19 +29,21 @@ jobs:
       - name: Generate catalog
         run: python3 scripts/generate.py --output-dir site
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site/
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      # Additive publish: new files land, changed files update, but files
+      # missing from this build (e.g. pinned tiers of versions that aged out
+      # of extraVersions) are never deleted — published URLs stay permanent.
+      - name: Commit to gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add pages origin/gh-pages
+          cp -R site/. pages/
+          cd pages
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no schema changes to publish"
+          else
+            git commit -m "publish: ${GITHUB_SHA::12}"
+            git push origin HEAD:gh-pages
+          fi

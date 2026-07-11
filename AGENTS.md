@@ -28,8 +28,10 @@ scripts/check-versions.py          # stale-pin report; --update bumps + keeps hi
 ## Conventions
 
 - Never push directly to `main`; all changes via PR with review.
-- `site/` is build output — never commit it; every deploy regenerates it from
-  scratch, so only versions listed in `sources.yaml` exist on the site.
+- `site/` is build output — never commit it to `main`. The publish workflow
+  commits it to the `gh-pages` branch (which Pages serves) **additively**:
+  never force-push or delete files there; stale pinned tiers are permanent
+  URLs by design.
 - Version bumps must preserve history: the old `version:` moves into
   `extraVersions` (max 5) so published pinned-tier URLs keep resolving.
   `check-versions.py --update` does this automatically — don't hand-edit pins
