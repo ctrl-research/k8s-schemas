@@ -109,6 +109,34 @@ def strictify(node):
     return node
 
 
+def nullify_optional(node):
+    """Let optional properties accept null, as Kubernetes serializes empty
+    optional fields (mirrors openapi2jsonschema's --kubernetes flag; e.g.
+    CRD manifests ship `status: {conditions: null}`)."""
+    if isinstance(node, list):
+        for item in node:
+            nullify_optional(item)
+    elif isinstance(node, dict):
+        # Applies to every property, required or not — the API server defaults
+        # required-but-null fields (gateway-api ships `storedVersions: null`).
+        # Guard: a real schema node's `type` is absent, a string, or a list
+        # (after this pass rewrites an ancestor); a properties *map* that
+        # defines a field named "properties" (JSONSchemaProps) also defines
+        # "type" as a field, whose value is a schema dict — excluded here.
+        if isinstance(node.get("properties"), dict) and not isinstance(node.get("type"), dict):
+            for prop in node["properties"].values():
+                if not isinstance(prop, dict):
+                    continue
+                prop_type = prop.get("type")
+                if isinstance(prop_type, str) and prop_type != "null":
+                    prop["type"] = [prop_type, "null"]
+                elif isinstance(prop_type, list) and "null" not in prop_type:
+                    prop["type"] = prop_type + ["null"]
+        for value in node.values():
+            nullify_optional(value)
+    return node
+
+
 def k8s_schemas(version):
     """Yield (group, kind, version, schema) for core k8s API types.
 
@@ -138,7 +166,7 @@ def k8s_schemas(version):
         if len(gvks) != 1 or gvks[0]["kind"].endswith("List"):
             continue
         gvk = gvks[0]
-        schema = strictify(to_json_schema(inline(definition, frozenset({name}))))
+        schema = nullify_optional(strictify(to_json_schema(inline(definition, frozenset({name})))))
         schema["$schema"] = "http://json-schema.org/draft-07/schema#"
         yield gvk["group"] or "core", gvk["kind"], gvk["version"], schema
 
