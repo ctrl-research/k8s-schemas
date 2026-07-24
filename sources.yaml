@@ -22,7 +22,9 @@ sources:
   - name: kubernetes
     kind: k8s
     # renovate: datasource=github-releases depName=kubernetes/kubernetes
-    version: v1.36.2
+    version: v1.36.3
+    extraVersions:
+      - v1.36.2
 
   # kustomization.yaml is not a CRD; republish the schemastore schema. Also
   # served for Component (v1alpha1), which has no published schema of its own
@@ -45,33 +47,43 @@ sources:
     urls:
       - https://github.com/kubernetes-sigs/gateway-api/releases/download/{version}/standard-install.yaml
     # renovate: datasource=github-releases depName=kubernetes-sigs/gateway-api
-    version: v1.6.0
+    version: v1.6.1
+    extraVersions:
+      - v1.6.0
 
   - name: flux
     kind: url
     urls:
       - https://github.com/fluxcd/flux2/releases/download/{version}/install.yaml
     # renovate: datasource=github-releases depName=fluxcd/flux2
-    version: v2.9.1
+    version: v2.9.3
+    extraVersions:
+      - v2.9.1
 
   - name: flux-operator
     kind: oci
     chart: oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator
     # renovate: datasource=docker depName=ghcr.io/controlplaneio-fluxcd/charts/flux-operator
-    version: 0.37.0
+    version: 0.52.0
+    extraVersions:
+      - 0.37.0
 
   - name: envoy-gateway
     kind: oci
     chart: oci://docker.io/envoyproxy/gateway-helm
     # renovate: datasource=docker depName=docker.io/envoyproxy/gateway-helm
-    version: v1.6.0
+    version: v1.8.3
+    extraVersions:
+      - v1.6.0
 
   - name: external-secrets
     kind: helm
     repo: https://charts.external-secrets.io
     chart: external-secrets
     # renovate: datasource=helm depName=external-secrets registryUrl=https://charts.external-secrets.io
-    version: 0.19.2
+    version: 2.8.0
+    extraVersions:
+      - 0.19.2
 
   - name: metallb
     kind: helm
@@ -85,40 +97,52 @@ sources:
     repo: https://victoriametrics.github.io/helm-charts
     chart: victoria-metrics-operator
     # renovate: datasource=helm depName=victoria-metrics-operator registryUrl=https://victoriametrics.github.io/helm-charts
-    version: 0.54.0
+    version: 0.66.3
+    extraVersions:
+      - 0.54.0
 
   - name: kube-prometheus-stack
     kind: helm
     repo: https://prometheus-community.github.io/helm-charts
     chart: kube-prometheus-stack
     # renovate: datasource=helm depName=kube-prometheus-stack registryUrl=https://prometheus-community.github.io/helm-charts
-    version: 75.3.3
+    version: 87.19.0
+    extraVersions:
+      - 75.3.3
 
   - name: cloudnative-pg
     kind: helm
     repo: https://cloudnative-pg.github.io/charts
     chart: cloudnative-pg
     # renovate: datasource=helm depName=cloudnative-pg registryUrl=https://cloudnative-pg.github.io/charts
-    version: 0.26.1
+    version: 0.29.0
+    extraVersions:
+      - 0.26.1
 
   - name: grafana-operator
     kind: oci
     chart: oci://ghcr.io/grafana/helm-charts/grafana-operator
     # renovate: datasource=docker depName=ghcr.io/grafana/helm-charts/grafana-operator
-    version: v5.18.0
+    version: v5.24.0
+    extraVersions:
+      - v5.18.0
 
   - name: dragonfly-operator
     kind: oci
     chart: oci://ghcr.io/dragonflydb/dragonfly-operator/helm/dragonfly-operator
     # renovate: datasource=docker depName=ghcr.io/dragonflydb/dragonfly-operator/helm/dragonfly-operator
-    version: v1.3.0
+    version: v1.6.1
+    extraVersions:
+      - v1.3.0
 
   - name: volsync
     kind: helm
     repo: https://backube.github.io/helm-charts
     chart: volsync
     # renovate: datasource=helm depName=volsync registryUrl=https://backube.github.io/helm-charts
-    version: 0.12.1
+    version: 0.16.0
+    extraVersions:
+      - 0.12.1
 
   - name: external-snapshotter
     kind: url
