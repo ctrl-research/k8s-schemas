@@ -144,12 +144,8 @@
         },
         "valuesInline": {
           "type": "object",
-          "patternProperties": {
-            ".*": {
-              "type": "object",
-              "additionalProperties": true
-            }
-          }
+          "additionalProperties": true,
+          "properties": {}
         },
         "valuesMerge": {
           "type": "string",
